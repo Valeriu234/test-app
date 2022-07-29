@@ -1,0 +1,114 @@
+.center-content {
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    }
+
+.item{
+    list-style-type: none;
+    padding: 9px 30px;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height, or 150% */
+
+
+    /* Dark Gray */
+
+    color: #42403F;
+    background: #FFFFFF;
+    /* Gray */
+
+    border: 1px solid #E7E5E4;
+    border-radius: 7px;
+
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 0;
+
+}
+
+.top-tabs {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(85.58deg, #A40731 -0.38%, #830B3A 41.27%, #002359 103.58%);
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+    border-radius: 7px;
+}
+
+.top-tabs h3 {
+    margin-bottom: 30px;
+    padding: 0;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 24px;
+
+    letter-spacing: 0.01em;
+    color: white;
+}
+
+li {
+    list-style-type: none;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height, or 150% */
+
+
+    /* White */
+
+    color: #FFFFFF;
+}
+
+.container-for-arrow {
+    display: flex;
+    justify-content: center;
+}
+
+.container-for-arrow img {
+    margin-left: 5px;
+}
+
+.form {
+    width: 1300px;
+    height: 610px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.center-section1 {
+    margin-top: 30px;
+    width: 640px;
+    height: 576px;
+}
+
+.center-section2 {
+    margin-top: 30px;
+    width: 640px;
+    height: 576px;
+}
+
+.choose-vehicle {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: #1B1918;
+}

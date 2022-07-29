@@ -1,0 +1,147 @@
+
+.container-for-offers-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+    width: 100%;
+    height: 750px;
+    background: url(../../images/bg-image/Oferte.png), #F4F9FF;
+    background-size: cover;
+}
+
+.container-h3 {
+    width: 1092px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.offers-container {
+    width: 1300px;
+    height: 590px;
+}
+
+.container-p {
+    width: 180px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+
+}
+.container-p p {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 10px;
+    color: #A40731;
+}
+
+.container-headers-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow-right {
+    width: 20px;
+    height: 20px;
+}
+
+.container-h3 h3 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: #1B1918;
+}
+
+
+.components {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.components h3 {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #1B1918;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.components p {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1B1918;
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.component1 {
+    background-color: white;
+    width: 420px;
+    height: 500px;
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+    border-radius: 7px;
+}
+.component1 img {
+    border-radius: 7px 7px 0 0;
+}
+.component2 {
+    background-color: white;
+    width: 420px;
+    height: 500px;
+    margin-left: 20px;
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+    border-radius: 7px;
+}
+.component2 img {
+    border-radius: 7px 7px 0 0;
+}
+.component3 {
+    background-color: white;
+    width: 420px;
+    height: 500px;
+    margin-left: 20px;
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+    border-radius: 7px;
+}
+.component3 img {
+    border-radius: 7px 7px 0 0;
+}
+.button-more {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+.button-more h4 {
+    padding-right: 10px;
+    margin-left: 20px;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #A40731;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}

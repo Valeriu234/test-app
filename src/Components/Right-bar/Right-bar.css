@@ -1,0 +1,35 @@
+.right-bar {
+    width: 100px;
+    height: calc(100vh - 102px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-left: 1px solid #E7E5E4;
+    align-items: center;
+}
+
+.round {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #42403F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.punct {
+    width: 11px;
+    height: 11px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    background-color: #00834B;
+}
+
+.right-bar hr{
+    width: 2px;
+    height: 186px;
+    background-color: #E7E5E4;
+    border-width: 0;
+}

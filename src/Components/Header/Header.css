@@ -1,0 +1,117 @@
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E7E5E4;
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+}
+
+.logo {
+    width: 200px;
+    height: 92px;
+}
+
+.fill1 {
+    width: 410px;
+    height: 1px;
+    background-color: #E7E5E4;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-width: 0;
+    flex-shrink: 1;
+}
+
+.header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 430px;
+    height: 90px;
+    line-height: 27px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.center {
+    width: 30%;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right-items {
+    width: 215px;
+    height: 101px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.logare {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inregistrare {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    margin: 0;
+}
+
+.text-right-items {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #1B1918;
+}
+
+.fill2 {
+    width: 410px;
+    height: 1px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #E7E5E4;
+    border-width: 0;
+    flex-shrink: 1;
+}
+
+
+.left .menu-icon {
+    margin-left: 34px;
+}
+
+.left .logo {
+    margin-left: 68px;
+}
+
+.text-languages {
+    display: flex;
+
+}
+
+.text-languages hr {
+    width: 100%;
+    height: 2px;
+}
