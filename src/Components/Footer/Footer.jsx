@@ -14,25 +14,25 @@ const Footer = () => {
                 <div className='first-section'>
                     <img src={logoImage} alt=""/>
                     <p>Dezvoltarea companiei MINICODE a fost determinată în mare parte de flexibilitatea soluțiilor și ofertelor, adaptivitații față de cerințele pieții și cerințelor clienților</p>
-                    <button>Comanda apel</button>
+                    <button className='button-comand'>Comanda apel</button>
                 </div>
                 <div className='second-section section'>
                     <h3 className='footer-heading'>Companie</h3>
                     <ul className='footer-links'>
-                        <li><a href="">Produse de asigurare</a></li>
-                        <li><a href="">Caz asigurat</a></li>
-                        <li><a href="">Noutăți</a></li>
-                        <li><a href="">Carieră</a></li>
-                        <li><a href="">Oferte</a></li>
-                        <li><a href="">Întrebări</a></li>
+                        <li className='companie-item'><a href="">Produse de asigurare</a></li>
+                        <li className='companie-item'><a href="">Caz asigurat</a></li>
+                        <li className='companie-item'><a href="">Noutăți</a></li>
+                        <li className='companie-item'><a href="">Carieră</a></li>
+                        <li className='companie-item'><a href="">Oferte</a></li>
+                        <li className='companie-item'><a href="">Întrebări</a></li>
                     </ul>
                 </div>
                 <div className='third-section section'>
                     <h3 className='footer-heading'>Contacte</h3>
                     <ul className='footer-links'>
-                        <li><a href="">+373 69 845 825</a></li>
-                        <li><a href="">+373 22 824 845</a></li>
-                        <li className='strada'><a href="">mun. Chișinău, str. București, 101</a></li>
+                        <li className='contacte-item'><a href="">+373 69 845 825</a></li>
+                        <li className='contacte-item'><a href="">+373 22 824 845</a></li>
+                        <li className='strada contacte-item'><a href="">mun. Chișinău, str. București, 101</a></li>
                     </ul>
                 </div>
                 <div className='fourth-section section'>

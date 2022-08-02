@@ -1,0 +1,49 @@
+{
+  "cards": [
+    {
+      "img":"Icon1",
+      "description" : "Autoturism cu pina la 9 locuri",
+      "id": "#car"
+    },
+    {
+      "img":"Icon1",
+      "description" : "Camion pina la 3,5 tone",
+      "id": "#minitruck"
+    },
+    {
+      "img":"Icon1",
+      "description" : "Camion mai mult de 3,5 tone",
+      "id": "#truck"
+    },
+    {
+      "img":"Icon1",
+      "description" : "Microbus pina la 20 locuri",
+      "id": "#minibus"
+    },
+    {
+      "img":"Icon1",
+      "description" : "Autobuz pina la 20 locuri",
+      "id": "#bus"
+    },
+    {
+      "img":"Icon1",
+      "description" : "Remorci,semiremorci",
+      "id": "#trailer"
+    },
+    {
+      "img":"Icon1",
+      "description" : "Refrigeratoare, cisterne",
+      "id": "#refrigerant"
+    },
+    {
+      "img":"Icon1",
+      "description" : "Tehnica speciala",
+      "id": "#technique"
+    },
+    {
+      "img":"Icon1",
+      "description" : "Echipament suplementar",
+      "id": "#other-technique"
+    }
+  ]
+}

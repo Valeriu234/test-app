@@ -9,20 +9,20 @@ return (<div className='header'>
         <div className='left'>
     <img className='menu-icon' src={menu1} alt=""/>
         <img className='logo' src={logo} alt=""/>
-        <hr className='fill1'/>
         </div>
-        
+        <hr className='fill1'/>
         <h1 className='header-text'>Cu siguranta,impreuna</h1>
 
-        <div className='right'>
+
             <hr className='fill2'/>
+        <div className='right'>
             <div className='right-items'>
         <div className='logare'>
-            <img src={users} alt=""/>
+            <img className='log-in' src={users} alt=""/>
             <p className='text-right-items'>Logare</p>
         </div>
             <div className='inregistrare'>
-                <img src={fileReg} alt=""/>
+                <img className='register' src={fileReg} alt=""/>
                 <p className='text-right-items'>Inregistrare</p>
             </div>
             </div>

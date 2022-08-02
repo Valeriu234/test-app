@@ -8,6 +8,7 @@ import AfterContent from "./Components/After-content/After-content";
 import Offers from "./Components/Offers/Offers";
 import Recenzii from "./Components/Recenzii/Recenzii";
 import Footer from "./Components/Footer/Footer";
+import './assets/fonts/Fonts.css'
 
 function App() {
   return ( <div className='App'>

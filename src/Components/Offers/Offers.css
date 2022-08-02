@@ -24,7 +24,6 @@
 }
 
 .container-p {
-    width: 180px;
     height: 45px;
     display: flex;
     align-items: center;
@@ -45,12 +44,14 @@
     justify-content: space-between;
 }
 
-.arrow-right {
+.arrow-right-offers {
     width: 20px;
     height: 20px;
+    fill: #A40731;
+    transition: 0.2s
 }
 
-.container-h3 h3 {
+ .title-offers {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 800;
@@ -134,7 +135,6 @@
 }
 
 .button-more h4 {
-    padding-right: 10px;
     margin-left: 20px;
     font-family: 'PT Root UI';
     font-style: normal;
@@ -144,4 +144,51 @@
     color: #A40731;
     margin-top: 9px;
     margin-bottom: 9px;
+}
+
+.container-p:hover {
+    cursor: pointer;
+}
+
+.container-p:hover .arrow-right-offers{
+    width: 34px;
+    height: 30px;
+}
+
+.button-more {
+    cursor: pointer;
+}
+.button-more:hover .arrow-right-offers {
+    width: 34px;
+    height: 30px;
+}
+.component2 img {
+    transition: 0.5s all ease-in-out;
+}
+.component2:hover img {
+    transform: scale(1.1);
+}
+
+
+.container-for-image {
+    width: 420px;
+    height: 247px;
+    overflow: hidden;
+}
+.component3 img {
+    transition: 0.5s all ease-in-out;
+}
+.component3:hover img {
+    transform: scale(1.1);
+}
+
+.component1 img {
+    transition: 0.5s all ease-in-out;
+}
+
+.component1:hover img {
+    transform: scale(1.1);
+}
+.button-more {
+    width: fit-content;
 }

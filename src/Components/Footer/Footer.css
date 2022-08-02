@@ -115,3 +115,30 @@
     font-size: 20px;
     line-height: 30px;
 }
+
+.companie-item {
+    margin-bottom: 10px;
+}
+
+.contacte-item {
+    margin-bottom: 10px;
+}
+
+.footer-links li:hover {
+    opacity: 0.5;
+}
+
+.fourth-section a:hover {
+    opacity: 0.5;
+}
+
+.button-comand:hover {
+    background: #A40731;
+    border: 1px solid #FFFFFF;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: white;
+}

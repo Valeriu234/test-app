@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    width: 430px;
+    min-width: 430px;
     height: 90px;
     line-height: 27px;
     font-family: 'Raleway';
@@ -100,6 +100,11 @@ p {
 
 .left .menu-icon {
     margin-left: 34px;
+
+}
+
+.menu-icon:hover {
+    cursor: pointer;
 }
 
 .left .logo {
@@ -115,3 +120,12 @@ p {
     width: 100%;
     height: 2px;
 }
+
+.inregistrare:hover {
+    cursor: pointer;
+}
+
+.logare:hover {
+    cursor: pointer;
+}
+

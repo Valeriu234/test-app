@@ -9,46 +9,52 @@ const Offers = () => {
        <div className="container-for-offers-container">
 <div className="offers-container">
 <div className="container-headers-text">
-    <div className='container-h3'>
-        <h3>Oferte</h3>
-    </div>
+
+        <h3 className='title-offers'>Oferte</h3>
+
     <div className='container-p'>
-        <p>Vezi toate ofertele</p>
-        <svg className="arrow-right">
+        <p className='see-all-offers'>Vezi toate ofertele</p>
+        <svg className="arrow-right-offers">
             <use href={sprite + '#arrow-right'}></use>
         </svg>
     </div>
 </div>
     <div className='components'>
         <div className='component1'>
+            <div className="container-for-image">
             <img src={image1} alt=""/>
+            </div>
             <h3>Asigurati locuinta atunci cind pleci in vacanta!</h3>
             <p>Asigurati locuinta atunci cind pleci in vacanta</p>
             <div className='button-more'>
-                <h4>Vezi mai mult</h4>
-                <svg className="arrow-right">
+                <h4 className='see-more'>Vezi mai mult</h4>
+                <svg className="arrow-right-offers">
                     <use href={sprite + '#arrow-right'}></use>
                 </svg>
             </div>
         </div>
         <div className='component2'>
+            <div className='container-for-image'>
             <img src={image2} alt=""/>
+            </div>
             <h3>Asigurati locuinta atunci cind pleci in vacanta!</h3>
             <p>Asigurati locuinta atunci cind pleci in vacanta</p>
             <div className='button-more'>
-                <h4>Vezi mai mult</h4>
-                <svg className="arrow-right">
+                <h4 className='see-more'>Vezi mai mult</h4>
+                <svg className="arrow-right-offers">
                     <use href={sprite + '#arrow-right'}></use>
                 </svg>
             </div>
         </div>
         <div className='component3'>
+            <div className="container-for-image">
             <img src={image3} alt=""/>
+            </div>
             <h3>Asigurati locuinta atunci cind pleci in vacanta!</h3>
             <p>Asigurati locuinta atunci cind pleci in vacanta</p>
             <div className='button-more'>
-                <h4>Vezi mai mult</h4>
-                <svg className="arrow-right">
+                <h4 className='see-more'>Vezi mai mult</h4>
+                <svg className="arrow-right-offers">
                     <use href={sprite + '#arrow-right'}></use>
                 </svg>
             </div>

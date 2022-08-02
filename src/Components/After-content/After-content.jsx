@@ -1,4 +1,4 @@
-import styles from './After-content.css'
+import  './After-content.css'
 
 
 const AfterContent = () => {
@@ -15,7 +15,7 @@ const AfterContent = () => {
         <input placeholder='(+373)__-___-___' type="text"/>
         </div>
         <div className="section2-second-section">
-<button>Trimite</button>
+<button className='button-send'>Trimite</button>
         </div>
     </div>
 </div>
