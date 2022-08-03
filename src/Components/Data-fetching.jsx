@@ -20,7 +20,8 @@ const DataFetching = () => {
         posts.map( i => console.log(i.description))
 
     },[posts])
-    return (
+    return ( <div className='cards+title'>
+            <h4 className='slider1-title'>Alege tipul autovehiculului</h4>
         <div className='container-for-cards'>
             {
                 posts.map((post) => {
@@ -34,6 +35,7 @@ const DataFetching = () => {
                     )
                 })
             }
+        </div>
         </div>
     )
 }

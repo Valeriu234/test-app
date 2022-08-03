@@ -1,0 +1,89 @@
+.carousel {
+   overflow: hidden;
+    flex-direction: row;
+}
+
+.inner {
+    transition: transform 0.3s;
+    white-space: nowrap;
+}
+
+.carousel-item {
+    background-color: #F9F9F9;
+    display: inline-flex;
+    width: 645px;
+
+
+
+
+}
+
+.arrow-left1 {
+    box-sizing: border-box;
+    fill:  #1B1918;
+    width: 20px;
+    height: 20px;
+}
+
+.arrow-left2 {
+    box-sizing: border-box;
+   fill: #FFFFFF;
+    width: 20px;
+    height: 20px;
+}
+
+.container-button1 {
+    width: 150px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #A40731;
+    border-radius: 7px;
+    background: #FFFFFF;
+    margin-top: 40px;
+    color: #1B1918;
+}
+
+.container-button1:hover {
+    background-color: #A40731;
+    color: white;
+}
+.container-button1:hover svg{
+    fill: white;
+}
+
+.container-button2:hover {
+    background-color: white;
+    color: #1B1918;
+}
+
+.container-button2:hover svg {
+    fill:  #1B1918;
+}
+.buttons {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+}
+.indicators {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-button2 {
+    width: 150px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #A40731;
+    border-radius: 7px;
+    background: #A40731;
+    margin-top: 40px;
+    color:#FFFFFF;;
+}

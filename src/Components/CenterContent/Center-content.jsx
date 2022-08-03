@@ -1,81 +1,89 @@
- import './Center-content.css'
-import sprite from '../../images/center/sprite.svg'
- import React, {useEffect,useState} from 'react'
- import Center from "./Center";
-import axios from "axios";
+import "./Center-content.css";
+import sprite from "../../images/center/sprite.svg";
+import React, { useState } from "react";
+import Center from "./Center";
 import DataFetching from "../Data-fetching";
-
+import Center2 from "./Center2";
+import Carousel,{ CarouselItem} from "../Carousel/Carousel";
+import Slidercasco2 from "../Sliders-casco/Slider-casco2";
 
 const CenterContent = () => {
-    const [state, setstate] = useState(false);
-    const [sort, setSort] = useState(false)
+    const [activeItem, setActiveItem] = useState(null);
 
-    const switchClass = () => {
-        if (state !== staterca) {
-            setstaterca(false);
-            setstate(true);
-        }
-
-    }
-
-
-const [staterca, setstaterca] = useState(false);
-    const [states, setState] = useState('')
-useEffect(()=>{
-
-},[states])
-    const [items] = useState([
+    const items = [
         {
-            title: "Carte verde"
-
+            id: 1,
+            title: "Carte verde",
         },
         {
-            title: "RCA"
+            id: 2,
+            title: "RCA",
         },
         {
-            title: "Casco"
+            id: 3,
+            title: "Casco",
         },
         {
-            title: "Medicala"
+            id: 4,
+            title: "Medicala",
         },
         {
-            title: 'Accidente'
+            id: 5,
+            title: "Accidente",
         },
         {
-            title: 'Bunuri'
+            id: 6,
+            title: "Bunuri",
         },
         {
-            title: 'Locuinte(imobile)'
-        }
-    ])
+            id: 7,
+            title: "Locuinte(imobile)",
+        },
+    ];
 
     return (
-        <div className='center-content'>
-            <div className='top-tabs'>
-       <h3>Alege tipul de asigurare</h3>
-                <ul className='menu-list'>
-                    {items.map((item,index)=> <Center setState={setState} index={index} setSort={setSort} sort={sort} key={index} title={item.title} states={states}
-                                                      switchClass={switchClass}/>)}
+        <div className="center-content">
+            <div className="top-tabs">
+                <h3>Alege tipul de asigurare</h3>
+                <ul className="menu-list">
+                    {items.map((item, id) => (
+                        <Center
+                            key={id}
+                            isActive={activeItem}
+                            setActive={() => setActiveItem(item.id)}
+                            item={item}
+                        />
+                    ))}
 
-                        <li  className='container-for-arrow'>Altele
-                            <svg className="arrow-right">
-                            <use href={sprite + '#arrow-right'}></use>
-                            </svg>
-                        </li>
+                    <li className="container-for-arrow">
+                        Altele
+                        <svg className="arrow-right">
+                            <use href={sprite + "#arrow-right"}></use>
+                        </svg>
+                    </li>
                 </ul>
             </div>
             <div className="form">
                 <div className="center-section1 ">
-                    <h2 className='choose-vehicle'>Alege tipul autovehicului</h2>
+                    {activeItem === items[2].id && (
+                        <Carousel>
+                         <CarouselItem>
+                            <DataFetching  />
+                         </CarouselItem>
+                            <CarouselItem>
 
+                            </CarouselItem>
+                        </Carousel>
+                    )}
                 </div>
                 <div className="center-section2">
-
+                    {activeItem === items[2].id  && (
+                        <Center2 />
+                    )}
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-
-export default CenterContent
+export default CenterContent;
