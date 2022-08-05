@@ -1,0 +1,18 @@
+
+.slider-rca1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.title-slider {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: #1B1918;
+    margin-top: 30px;
+}
+

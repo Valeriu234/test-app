@@ -1,0 +1,48 @@
+.price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.final-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.livrare {
+    fill: red;
+    width: 15px;
+    height: 15px;
+}
+
+.plus {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #1B1918;
+}
+
+.free-delivery {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #1B1918;
+}
+
+.price-number {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #1B1918;
+}
+.dollar {
+    width: 12px;
+    height: 30px;
+}

@@ -5,7 +5,10 @@ import Center from "./Center";
 import DataFetching from "../Data-fetching";
 import Center2 from "./Center2";
 import Carousel,{ CarouselItem} from "../Carousel/Carousel";
-import Slidercasco2 from "../Sliders-casco/Slider-casco2";
+import Slidercasco2 from "../Sliders-casco2/Slider-casco2";
+import SliderCasco3 from "../Slider-casco3/Slider-casco3";
+import SliderCasco4 from "../Slider-casco4/SliderCasco4";
+import SliderRca1 from "../Slider-RCA1/Slider-RCA1";
 
 const CenterContent = () => {
     const [activeItem, setActiveItem] = useState(null);
@@ -71,7 +74,20 @@ const CenterContent = () => {
                             <DataFetching  />
                          </CarouselItem>
                             <CarouselItem>
-
+                             <Slidercasco2 />
+                            </CarouselItem>
+                            <CarouselItem>
+                                <SliderCasco3 />
+                            </CarouselItem>
+                            <CarouselItem>
+                                <SliderCasco4 />
+                            </CarouselItem>
+                        </Carousel>
+                    )}
+                    {activeItem === items[1].id && (
+                        <Carousel>
+                            <CarouselItem>
+                             <SliderRca1/>
                             </CarouselItem>
                         </Carousel>
                     )}
@@ -79,6 +95,9 @@ const CenterContent = () => {
                 <div className="center-section2">
                     {activeItem === items[2].id  && (
                         <Center2 />
+                    )}
+                    {activeItem === items[1].id && (
+                             <Center2 />
                     )}
                 </div>
             </div>
