@@ -10,6 +10,11 @@ import SliderCasco3 from "../Slider-casco3/Slider-casco3";
 import SliderCasco4 from "../Slider-casco4/SliderCasco4";
 import SliderRca1 from "../Slider-RCA1/Slider-RCA1";
 import SliderRca2 from "../Slider-RCA2/Slider-RCA2";
+import SliderRCA3 from "../Slider-RCA3/Slider-RCA3";
+import SliderRCA4 from "../Slider-RCA4/Slider-RCA4";
+import SliderRCA5 from "../Slider-RCA5/Slider-RCA5";
+import CarteVerde1 from "../Carte-Verde1/Carte-Verde1";
+import CarteVerde2 from "../Cartea-Verde2/Carte-Verde2";
 
 const CenterContent = () => {
     const [activeItem, setActiveItem] = useState(null);
@@ -92,6 +97,25 @@ const CenterContent = () => {
                             </CarouselItem>
                             <CarouselItem>
                                 <SliderRca2/>
+                            </CarouselItem>
+                            <CarouselItem>
+                                <SliderRCA3/>
+                            </CarouselItem>
+                            <CarouselItem>
+                                <SliderRCA4/>
+                            </CarouselItem>
+                            <CarouselItem>
+                                <SliderRCA5/>
+                            </CarouselItem>
+                        </Carousel>
+                    )}
+                    {activeItem === items[0].id && (
+                        <Carousel>
+                        <CarouselItem>
+                            <CarteVerde1/>
+                        </CarouselItem>
+                            <CarouselItem>
+                            <CarteVerde2/>
                             </CarouselItem>
                         </Carousel>
                     )}

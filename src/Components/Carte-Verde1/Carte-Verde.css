@@ -1,0 +1,24 @@
+.carte-verde1 {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    width: 600px;
+}
+.checkbox-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons-title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flex-container {
+    display: flex;
+  justify-content: space-between;
+    margin-bottom: 40px;
+}
+

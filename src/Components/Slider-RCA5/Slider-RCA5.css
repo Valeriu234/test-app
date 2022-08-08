@@ -1,0 +1,5 @@
+.slider-rca5 {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}

@@ -24,3 +24,15 @@
     margin-bottom: 130px;
 }
 
+.question {
+    width: 20px;
+    height: 20px;
+    fill: #A40731;
+}
+
+.titlu-icon {
+width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}

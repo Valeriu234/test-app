@@ -85,14 +85,15 @@ li {
 }
 
 .form {
-    width: 1300px;
+    width: 1330px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: -20px;
+
 }
 
 .center-section1 {
-    width: auto;
     height: 576px;
 }
 
@@ -100,6 +101,9 @@ li {
     margin-top: 105px;
     width: 640px;
     height: 576px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .choose-vehicle {
@@ -193,7 +197,6 @@ li.container-for-arrow:hover  .arrow-right{
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 40px;
-    width: 650px;
 }
 
 .icon-cars {
@@ -215,7 +218,7 @@ li.container-for-arrow:hover  .arrow-right{
 }
 
 .menu-description1 {
-    width: 630px;
+    width: 620px;
     background: #FFFFFF;
     border-radius: 7px 7px 0px 0px;
     display: flex;
@@ -225,9 +228,10 @@ li.container-for-arrow:hover  .arrow-right{
     padding: 10px 20px;
     gap: 20px;
     cursor: pointer;
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
 }
 .menu-description2 {
-    width: 630px;
+    width: 620px;
     background: #FFFFFF;
     border-radius: 7px 7px 0px 0px;
     display: flex;
@@ -237,6 +241,7 @@ li.container-for-arrow:hover  .arrow-right{
     padding: 10px 20px;
     gap: 20px;
     cursor: pointer;
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
 }
 
 .title-description {
@@ -273,7 +278,7 @@ li.container-for-arrow:hover  .arrow-right{
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    width: 630px;
+    width: 620px;
     border-top: rgb(164, 7, 49, 0.1) solid 1px;
     background-color: #FFFFFF;
     transition: all 0.3s;
@@ -289,7 +294,6 @@ li.container-for-arrow:hover  .arrow-right{
     align-items: flex-start;
     padding: 0px;
     width: 630px;
-    /*box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);*/
     border-radius: 7px;
     margin-bottom: 20px;
 

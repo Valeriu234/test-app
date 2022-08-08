@@ -13,6 +13,7 @@ const MainContainer = styled.div`
   gap: 40px;
   width: 670px;
   height: auto;
+  margin-left: -30px;
 `
 const Tittle = styled.h3`
   font-family: 'Raleway';
@@ -22,6 +23,7 @@ const Tittle = styled.h3`
   line-height: 36px;
   letter-spacing: 0.01em;
   color: #1B1918;
+  margin-left: 15px;
 `
 const CardsContainer = styled.div`
     display: flex;
@@ -57,7 +59,8 @@ const StyledSVG = styled(SVG)`
 const Row = styled.div`
     display: flex;
     gap: 20px;
-  width: 100%;
+  width: 95%;
+  
 `
 const DescriptionCard = styled.p`
   font-family: 'PT Root UI';
