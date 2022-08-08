@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    height: auto;
+    width: 700px;
 }
 
 .title-slider {
@@ -14,5 +16,11 @@
     letter-spacing: 0.01em;
     color: #1B1918;
     margin-top: 30px;
+}
+
+.container-input-rca {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 130px;
 }
 

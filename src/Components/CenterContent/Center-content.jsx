@@ -9,6 +9,7 @@ import Slidercasco2 from "../Sliders-casco2/Slider-casco2";
 import SliderCasco3 from "../Slider-casco3/Slider-casco3";
 import SliderCasco4 from "../Slider-casco4/SliderCasco4";
 import SliderRca1 from "../Slider-RCA1/Slider-RCA1";
+import SliderRca2 from "../Slider-RCA2/Slider-RCA2";
 
 const CenterContent = () => {
     const [activeItem, setActiveItem] = useState(null);
@@ -88,6 +89,9 @@ const CenterContent = () => {
                         <Carousel>
                             <CarouselItem>
                              <SliderRca1/>
+                            </CarouselItem>
+                            <CarouselItem>
+                                <SliderRca2/>
                             </CarouselItem>
                         </Carousel>
                     )}

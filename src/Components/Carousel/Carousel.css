@@ -1,17 +1,19 @@
 .carousel {
    overflow: hidden;
     flex-direction: row;
+
 }
 
 .inner {
     transition: transform 0.3s;
     white-space: nowrap;
+    width: 685px;
 }
 
 .carousel-item {
     background-color: #F9F9F9;
     display: inline-flex;
-    width: 650px;
+    width: 680px;
 }
 
 .arrow-left1 {
