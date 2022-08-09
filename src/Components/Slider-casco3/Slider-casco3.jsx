@@ -13,33 +13,32 @@ const SliderCasco3 = () => {
             <label className='teritoriu' htmlFor="teritoriu">
                 <span className='input-title'>Teritoriu de acoperire CASCO</span>
                 <div className="checkbox">
-                    <div className='button-check'>
-                        <input className='button-checkbox' type="checkbox"/>
-                        <span className='checkbox-text'>RM</span>
-                    </div>
-                    <div className='button-check'>
-                        <input className='button-checkbox' type="checkbox"/>
-                        <span className='checkbox-text'>RM + CSI</span>
-                    </div>
-                    <div className='button-check'>
-                        <input className='button-checkbox' type="checkbox"/>
-                        <span className='checkbox-text'>RM + CSI + EU + TURCIA</span>
-                    </div>
+                    <label className="container">RM
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
+                    <label className="container">RM + CSI
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
+                    <label className="container">RM + CSI + EU + TURCIA
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
                 </div>
             </label>
             <div className="container-input">
                 <span className='input-title'>Fransiza</span>
                 <div className="checkbox">
-                    <div className='button-check'>
-                        <input className='button-checkbox' type="checkbox"/>
-                        <span className='checkbox-text'>Fara Fransiza</span>
-                    </div>
-                    <div className="checkbox">
-                        <div className='button-check'>
-                            <input className='button-checkbox' type="checkbox"/>
-                            <span className='checkbox-text'>Cu aplicarea fransizei</span>
-                        </div>
-                    </div>
+                    <label className="container">Fara Fransiza
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
+                    <label className="container">Cu aplicarea fransizei
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
+
                 </div>
             </div>
 

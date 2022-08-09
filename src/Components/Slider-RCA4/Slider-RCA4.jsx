@@ -8,40 +8,40 @@ const SliderRCA4 = () => {
             <div className="container-step">
                     <span className='input-title'>Sunteti pensionar sau aveti grad de invaliditate?</span>
                 <div className="checkbox">
-                    <div className='button-check'>
-                        <input className='button-checkbox' type="checkbox"/>
-                        <span className='checkbox-text'>DA</span>
-                    </div>
-                    <div className='button-check'>
-                        <input className='button-checkbox' type="checkbox"/>
-                        <span className='checkbox-text'>NU</span>
-                    </div>
+                    <label className="container">DA
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
+                    <label className="container">Nu
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
                 </div>
             </div>
             <div className="container-step">
                 <span className='input-title'>Aţi mai încheiat contract de asigurare RCA?</span>
                 <div className="checkbox">
-                    <div className='button-check'>
-                        <input className='button-checkbox' type="checkbox"/>
-                        <span className='checkbox-text'>DA</span>
-                    </div>
-                    <div className='button-check'>
-                        <input className='button-checkbox' type="checkbox"/>
-                        <span className='checkbox-text'>NU</span>
-                    </div>
+                    <label className="container">DA
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
+                    <label className="container">Nu
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
                 </div>
             </div>
             <div className="container-step">
                 <span className='input-title'>Asigurare pentru remorci</span>
                 <div className="checkbox">
-                    <div className='button-check'>
-                        <input className='button-checkbox' type="checkbox"/>
-                        <span className='checkbox-text'>DA</span>
-                    </div>
-                    <div className='button-check'>
-                    <input className='button-checkbox' type="checkbox"/>
-                    <span className='checkbox-text'>NU</span>
-                </div>
+                    <label className="container">DA
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
+                    <label className="container">Nu
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
                 </div>
             </div>
         </div>

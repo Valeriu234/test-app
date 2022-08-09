@@ -36,3 +36,8 @@ width: 600px;
     justify-content: space-between;
     align-items: flex-start;
 }
+
+.dropdown {
+  width: 600px;
+}
+
