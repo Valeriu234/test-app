@@ -46,3 +46,42 @@
     width: 12px;
     height: 30px;
 }
+
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 600px;
+    height: 30px;
+    align-items: flex-end;
+}
+
+.button-check {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.checkbox-text {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #948E8C;
+}
+
+.button-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #A40731;
+    border-radius: 4px;
+}
+
+.container-input {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+

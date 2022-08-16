@@ -1,0 +1,11 @@
+.carte-verde1 {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    width: 600px;
+}
+
+
+.active-image {
+    background-color: red;
+}

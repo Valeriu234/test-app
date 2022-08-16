@@ -1,11 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import SVG from "react-inlinesvg";
-import car from '../../images/icons/machine-icons/car.svg'
-import bus from '../../images/icons/machine-icons/bus.svg'
-import tractor from '../../images/icons/machine-icons/tractor.svg'
-import fura from  '../../images/icons/machine-icons/truck.svg'
-import motorcycle from '../../images/icons/machine-icons/bike.svg'
+import sprite from "../../images/center/sprite.svg";
+import './Slider-RCA2.css'
 
 const MainContainer = styled.div`
     display: flex;
@@ -26,13 +23,15 @@ const Tittle = styled.h3`
   margin-left: 15px;
 `
 const CardsContainer = styled.div`
-    display: flex;
-    width: 700px;
-  align-items: center;
-    flex-direction: column;
-    gap: 40px;
-    flex-wrap: wrap;
-  height: 415px;
+  display: grid;
+  width: 670px;
+  grid-template-columns:  200px 200px 200px ;
+  grid-template-rows: 125px;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  padding-left: 15px;
+  
+  
    
 `
 const Card = styled.div`
@@ -41,11 +40,20 @@ const Card = styled.div`
     justify-content: center;
     align-items: center;
     width: 200px;
-  height: 125px;
-  gap: 7px;
-  background: #FFFFFF;
-  box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
-  border-radius: 7px;
+    height: 125px;
+    gap: 7px;
+    background:${(props) => props.isActive ? 'red' : 'white'} ;
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+    border-radius: 7px;
+  border: 1px solid white;
+  
+    &:hover {
+    border: 1px solid #A40731;
+     transition: 2s ease-out; 
+      cursor: pointer;
+  }
+  
+  
 `
 
 const StyledSVG = styled(SVG)`
@@ -53,7 +61,12 @@ const StyledSVG = styled(SVG)`
     height: 50px;
     & path {
       fill: #1B1918;
-    }
+    }${Card}:hover & {
+       & path {
+         fill: #A40731;
+         transition: 1s ease-out;
+       }
+         }
 `
 
 const Row = styled.div`
@@ -72,45 +85,65 @@ const DescriptionCard = styled.p`
   color: #1B1918;
   max-width: 160px;
   white-space: initial;
+  ${Card}:hover &{
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    transition: 1s ease-out;
+  }
 `
 const SuperContainer = styled.div`
     padding-left: 15px;
 `
 
 const SliderRca2 = () => {
+    const [appState, changeState] = useState({
+        activeObject: null,
+        objects: [
+            {id: 1, image: '#car', description:'Autoturism cu pînă la 9 locuri' },
+            {id: 2, image: '#bus',description:'Autovehicule destinate transportului de pers...' },
+            {id: 3, image: '#tractor', description: 'Tractoare rutiere avind puterea motorului' },
+            {id: 4, image: '#truck', description: 'Camioane si alte autovehicule a caror m...'},
+            {id: 5, image: '#bike', description: 'Motociclete'}]
+    });
+
+    const toggleActive = (index) => {
+        changeState({ ...appState, activeObject: appState.objects[index] });
+    }
+
+    const toggleActiveStyles = (index) => {
+    if (appState.objects[index] === appState.activeObject) {
+        return 'activeCard';
+    } else {
+            return 'card'
+        }
+    }
+
     return (
         <SuperContainer>
         <MainContainer>
             <Tittle>Alege tipul autovehiculului</Tittle>
            <CardsContainer>
-               <Row>
-               <Card>
-               <StyledSVG src={car}/>
-                   <DescriptionCard>Autoturism cu pînă la 9 locuri</DescriptionCard>
-               </Card>
-               <Card>
-                   <StyledSVG src={bus}/>
-                   <DescriptionCard>Autovehicule destinate transportului de pers...</DescriptionCard>
-               </Card>
-               <Card>
-                   <StyledSVG src={tractor}/>
-                   <DescriptionCard>Tractoare rutiere avind puterea motorului</DescriptionCard>
-               </Card>
-               </Row>
-               <Row>
-               <Card>
-                   <StyledSVG src={fura}/>
-                   <DescriptionCard>Camioane si alte autovehicule a caror m...</DescriptionCard>
-               </Card>
-               <Card>
-                   <StyledSVG src={motorcycle}/>
-                   <DescriptionCard>Motociclete</DescriptionCard>
-               </Card>
-               </Row>
+               {
+               appState.objects.map((post,index) => {
+               return (
+               <div onClick={() => toggleActive(index)} className={toggleActiveStyles(index)} key={index}>
+               <svg className={appState.objects[index] === appState.activeObject ? 'activeIcon' : 'cars'}>
+               <use href={sprite + post.image}></use>
+               </svg>
+               <h4 className={appState.objects[index] === appState.activeObject ? 'active-card-description' : 'card-description'}>{post.description}</h4>
+               </div>
+               )
+               })
+               }
+
            </CardsContainer>
         </MainContainer>
         </SuperContainer>
     );
 };
 
+export  {CardsContainer ,Row, Card,StyledSVG,DescriptionCard,Tittle,SuperContainer,MainContainer}
 export default SliderRca2;

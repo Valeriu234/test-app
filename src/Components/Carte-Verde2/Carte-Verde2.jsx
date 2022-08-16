@@ -1,25 +1,36 @@
-import './Carte-Verde.css'
+import './Carte-Verde2.css'
+import sprite from "../../images/center/sprite.svg";
+import livrare from "../../images/icons/image 7.png";
 
 
-const CarteVerde1 = () => {
+const CarteVerde2 = () => {
     return (
         <div className='carte-verde1'>
             <h3 className='title-slider'>Zona de deplasara</h3>
             <div className="zona">
-                <span className='input-title'>Zona de deplasara</span>
-            <div className="checkbox-column">
-                <label className="container">Ucraina, Belarus
-                    <input type="checkbox" width='16px' height='16px'/>
-                        <span className="checkmark"></span>
-                </label>
-                <label className="container">Ucraina, Belarus, Federatia Rusa
-                    <input type="checkbox" />
+                <span className='carte-verde-title'>Zona de deplasara</span>
+            <div className="checkbox-column-carte-verde">
+                <div className='button-check'>
+                    <label className="container">
+                        <input type="checkbox" width='16px' height='16px'/>
                         <span className="checkmark"></span>
                     </label>
-                <label className="container">Tarile membre ale sistemului Carte Verde, Europa
-                    <input type="checkbox" />
+                    <p className='text-checkbox'>Ucraina,Belarus</p>
+                </div>
+                <div className='button-check'>
+                    <label className="container">
+                        <input type="checkbox" width='16px' height='16px'/>
                         <span className="checkmark"></span>
-                </label>
+                    </label>
+                    <p className='text-checkbox'>Ucraina,Belarus,Federatia Rusa</p>
+                </div>
+                <div className='button-check'>
+                    <label className="container">
+                        <input type="checkbox" width='16px' height='16px'/>
+                        <span className="checkmark"></span>
+                    </label>
+                    <p className='text-checkbox'>Tarile membre ale sistemului Carte Verde, Europa</p>
+                </div>
             </div>
             </div>
             <div className="buttons-title">
@@ -107,9 +118,20 @@ const CarteVerde1 = () => {
                 </div>
             </div>
             </div>
+            <div className="final-price">
+                <div className="price">
+                    <span className='price-number'>153</span>
+                    <svg className="dollar">
+                        <use href={sprite + "#$"}></use>
+                    </svg>
+                </div>
+                <span className='plus'>+</span>
+                <img src={livrare} alt=""/>
+                <span className="free-delivery">Livrare gratuita</span>
+            </div>
         </div>
     )
 }
 
 
-export default CarteVerde1
+export default CarteVerde2

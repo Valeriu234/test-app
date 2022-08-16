@@ -26,8 +26,8 @@ const selectStyles = {
         borderColor: state.isFocused ? 'red' : '#E7E5E4',
         boxShadow: 'none',
         cursor: 'pointer',
-        padding: '0 15px',
-        height: '45px'}),
+        height: '45px',
+        borderRadius: '7px'}),
     dropdownIndicator: (styles) => ({
     ...styles, display: 'none'
     }),
@@ -58,10 +58,13 @@ const selectStyles = {
                     </svg>
                 </div>
             <div className="checkbox">
-                <label className="container">Republica Moldova
+                <div className='button-check'>
+                <label className="container">
                     <input type="checkbox" width='16px' height='16px'/>
                     <span className="checkmark"></span>
                 </label>
+                <p className='text-checkbox'>Republica Moldova</p>
+            </div>
             </div>
             </div>
             <div className="container-step">
@@ -73,16 +76,18 @@ const selectStyles = {
                 </div>
                 <div className="checkbox">
                     <div className='button-check'>
-                        <label className="container">Ucraina, Belarus
+                        <label className="container">
                             <input type="checkbox" width='16px' height='16px'/>
                             <span className="checkmark"></span>
                         </label>
+                        <p className='text-checkbox'>Ucraina, Belarus</p>
                     </div>
                     <div className='button-check'>
-                        <label className="container">Ucraina, Belarus
+                        <label className="container">
                             <input type="checkbox" width='16px' height='16px'/>
                             <span className="checkmark"></span>
                         </label>
+                        <p className='text-checkbox'>Ucraina, Belarus</p>
                     </div>
                 </div>
 
@@ -90,13 +95,13 @@ const selectStyles = {
             </div>
             <div className='container-input-rca'>
                 <div className='titlu-icon'>
-                <span className='input-title'>Domiciliul persoanei asigurate</span>
+                <span className='titlu-select'>Domiciliul persoanei asigurate</span>
                     <svg className="question">
                         <use href={sprite +"#question"}></use>
                     </svg>
                 </div>
                <div className='dropdown'>
-                <Select classNamePrefix='custom-select'  options={ data } defaultValue={data[1]} styles={selectStyles} />
+                <Select classNamePrefix='custom-select'  isSearchable={false} options={ data } defaultValue={data[1]} styles={selectStyles} />
                </div>
             </div>
         </div>

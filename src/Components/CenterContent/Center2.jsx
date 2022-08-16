@@ -15,7 +15,7 @@ const Center2 = () => {
     }
     return (<>
             <div className="container-big">
-        <div onClick={handleClick2} className='menu-description1'>
+        <div onClick={handleClick2} className={`${isActive2 ? 'menu-description1' : 'menu-description1-active'}`}>
     <h3 className='title-description'>Obiectul asigurarii</h3>
             <svg className=" close1">
                 <use href={sprite + '#close'}></use>

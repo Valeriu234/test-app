@@ -1,0 +1,49 @@
+.card {
+    border: 1px solid white;
+}
+
+
+
+
+.card:hover use{
+    fill: #A40731;
+}
+
+
+.activeCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+    border-radius: 7px;
+    cursor: pointer;
+    background-color:#FFFFFF;
+    white-space: initial;
+    border: 1px solid #A40731;
+    transition: 1.5s ease-out;
+}
+
+.activeIcon {
+    fill: #A40731;
+    width: 50px;
+    height: 50px;
+}
+
+.cars {
+    width: 50px;
+    height: 50px;
+    fill: black;
+}
+
+.active-card-description {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    width: 160px;
+    height: 42px;
+}
