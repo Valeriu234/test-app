@@ -10,18 +10,26 @@ export const CarouselItem = ({ children, width}) => {
     );
 };
 
-const Carousel = ({ children }) => {
+const Carousel = ({ children, disabled,setCountClick,countClick }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
+
     const updateIndex = (newIndex) => {
+
         if (newIndex < 0) {
             newIndex = 0;
         } else if (newIndex >= React.Children.count(children)) {
             newIndex = React.Children.count(children) - 1;
         }
-
+        setCountClick(newIndex+1)
         setActiveIndex(newIndex)
     }
+
+
+
+
+
+
     return (
         <div className="carousel">
             <div className="inner" style={{ transform: `translateX(-${activeIndex * 100}%)`}}>
@@ -33,6 +41,7 @@ const Carousel = ({ children }) => {
                 <button
                     onClick={() => {
                         updateIndex(activeIndex - 1);
+                        console.log(activeIndex)
                     }} >
                     <div className="container-button1">
                         <svg className="arrow-left1">
@@ -41,10 +50,13 @@ const Carousel = ({ children }) => {
                         <span className='buttons'>Inapoi</span>
                     </div>
                 </button>
-                <button onClick={() => {
+                <button className={`${disabled? 'disabled' : ''}`}  onClick={() => {
                       updateIndex(activeIndex + 1);
+                    console.log(countClick)
+
+
                 }}>
-                    <div className="container-button2">
+                    <div className='container-button2'>
                         <span className="buttons">Inainte</span>
                         <svg className="arrow-left2">
                             <use href={sprite + "#arrow-right"}></use>

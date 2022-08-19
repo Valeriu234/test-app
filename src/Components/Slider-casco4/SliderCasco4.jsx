@@ -1,15 +1,35 @@
 import './SliderCasco4.css'
 import sprite from '../../images/center/sprite.svg'
 import livrare from '../../images/icons/image 7.png'
+import MySelect from "../UI/MySelect";
 
 
 const SliderCasco4 = () => {
+
+    const data = [
+        {
+            value: 1,
+            label: "ALFA ROMEO"
+        },
+        {
+            value: 2,
+            label: "BENTLEY"
+        },
+        {
+            value: 3,
+            label: "BMW"
+        },
+        {
+            value: 4,
+            label: "CHEVROLET"
+        }
+    ]
     return (
         <div className='slider-casco3'>
             <h3 className='title-slider2'>Alege valoarea pe peata</h3>
             <label className='container-input' htmlFor="valoarea">
                 <span className='input-title'>Alege valoarea de peata ( € )</span>
-                <input className='input' placeholder='0'  type="text"/>
+               <MySelect data={data} placeholder='0'/>
             </label>
             <label className='teritoriu' htmlFor="teritoriu">
                 <span className='input-title'>Teritoriu de acoperire CASCO</span>

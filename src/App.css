@@ -6,7 +6,13 @@
 
 .content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     background-color: #F9F9F9;
 }
+
+.rca {
+    flex-basis: 100px;
+
+}
+

@@ -15,9 +15,10 @@ import CarteVerde2 from "../Carte-Verde2/Carte-Verde2";
 import CarteVerde1 from "../Carte-Verde1/Carte-verde1";
 
 
-const CenterContent = () => {
+const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
     const [activeItem, setActiveItem] = useState(null);
-
+    const [state, setState] = useState(true)
+    const [disabled, changeDisabled] = useState(true);
     const items = [
         {
             id: 1,
@@ -56,6 +57,7 @@ const CenterContent = () => {
                 <ul className="menu-list">
                     {items.map((item, id) => (
                         <Center
+                            setRightBar={setIsMenu}
                             key={id}
                             isActive={activeItem}
                             setActive={() => setActiveItem(item.id)}
@@ -74,9 +76,9 @@ const CenterContent = () => {
             <div className="form">
                 <div className="center-section1 ">
                     {activeItem === items[2].id && (
-                        <Carousel>
+                        <Carousel countClick={countClick} setCountClick={setCountClick} disabled={disabled}>
                          <CarouselItem>
-                            <DataFetching  />
+                            <DataFetching  changeDisabled={changeDisabled}/>
                          </CarouselItem>
                             <CarouselItem>
                              <Slidercasco2 />
@@ -103,7 +105,7 @@ const CenterContent = () => {
                         </Carousel>
                     )}
                     {activeItem === items[0].id && (
-                        <Carousel>
+                        <Carousel >
                             <CarouselItem>
                                 <CarteVerde1/>
                             </CarouselItem>

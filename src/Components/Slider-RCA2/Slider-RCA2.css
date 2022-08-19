@@ -23,6 +23,7 @@
     white-space: initial;
     border: 1px solid #A40731;
     transition: 1.5s ease-out;
+    width: 200px;
 }
 
 .activeIcon {

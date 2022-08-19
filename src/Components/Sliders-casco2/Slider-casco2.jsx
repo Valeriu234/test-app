@@ -1,7 +1,48 @@
 import './Slider-casco2.css'
+import MySelect from "../UI/MySelect";
 
 
 const Slidercasco2 = () => {
+
+    const data = [
+        {
+            value: 1,
+            label: "ALFA ROMEO"
+        },
+        {
+            value: 2,
+            label: "BENTLEY"
+        },
+        {
+            value: 3,
+            label: "BMW"
+        },
+        {
+            value: 4,
+            label: "CHEVROLET"
+        }
+    ]
+    const data2 = [
+        {
+            value: 1,
+            label: "CIVIC"
+        },
+        {
+            value: 2,
+            label: "E 34"
+        },
+        {
+            value: 3,
+            label: "CAMARO"
+        },
+        {
+            value: 4,
+            label: "W 220"
+        }
+    ];
+
+
+
     return (
         <div className='slider-casco2'>
             <h3 className='title-slider2'>
@@ -11,11 +52,11 @@ const Slidercasco2 = () => {
                 <form>
                     <label className='container-input' htmlFor="marca">
                         <span className='input-title'>Marca</span>
-                        <input className='input' placeholder='Introduceti marca' type="text"/>
+                        <MySelect placeholder='Introduceti marca' data={data}/>
                     </label>
                     <label className='container-input' htmlFor="model">
                         <span className='input-title'>Model</span>
-                        <input className='input' placeholder='Introduceti modelul' type="text"/>
+                        <MySelect placeholder='Introduceti modelul' data={data2}/>
                     </label>
                     <div className="container-radio">
                         <span className='input-title'>

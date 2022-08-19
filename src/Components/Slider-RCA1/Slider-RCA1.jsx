@@ -1,7 +1,6 @@
 import './Slider-RCA1.css'
 import sprite from '../../images/center/sprite.svg'
-import Select from "react-select";
-import {useState} from "react";
+import MySelect from "../UI/MySelect";
 
 
 function SliderRca1() {
@@ -17,61 +16,31 @@ function SliderRca1() {
         }
     ];
 
-const selectStyles = {
-    control: (styles,state) =>
-        ({...styles, backgroundColor: 'white',
-        '&:hover': {
-            borderColor: 'red'
-        },
-        borderColor: state.isFocused ? 'red' : '#E7E5E4',
-        boxShadow: 'none',
-        cursor: 'pointer',
-        height: '45px',
-        borderRadius: '7px'}),
-    dropdownIndicator: (styles) => ({
-    ...styles, display: 'none'
-    }),
-    indicatorSeparator: (styles) => ({
-        ...styles, display: 'none'
-    }),
-    menuList: (styles) => ({
-        ...styles, height: '100px',
-        display: 'flex',
-        gap: '10px',
-        flexDirection: 'column',
-        padding: '0',
-    }),
-    option: (styles) => ({
-      ...styles, height: '45px'
-    })
-
-}
-
     return (
         <div className='slider-rca1'>
             <h3 className='title-slider'>Alege tipul autovehiculului</h3>
             <div className="container-step">
                 <div className='titlu-icon'>
-            <span className='input-title'>Autovehiculul este inmatriculat in:</span>
+                    <span className='input-title'>Autovehiculul este inmatriculat in:</span>
                     <svg className="question">
-                        <use href={sprite +"#question"}></use>
+                        <use href={sprite + "#question"}></use>
                     </svg>
                 </div>
-            <div className="checkbox">
-                <div className='button-check'>
-                <label className="container">
-                    <input type="checkbox" width='16px' height='16px'/>
-                    <span className="checkmark"></span>
-                </label>
-                <p className='text-checkbox'>Republica Moldova</p>
-            </div>
-            </div>
+                <div className="checkbox">
+                    <div className='button-check'>
+                        <label className="container">
+                            <input type="checkbox" width='16px' height='16px'/>
+                            <span className="checkmark"></span>
+                        </label>
+                        <p className='text-checkbox'>Republica Moldova</p>
+                    </div>
+                </div>
             </div>
             <div className="container-step">
                 <div className='titlu-icon'>
-                <span className='input-title'>Posesorul autovehicoluiui este persoană:</span>
+                    <span className='input-title'>Posesorul autovehicoluiui este persoană:</span>
                     <svg className="question">
-                        <use href={sprite +"#question"}></use>
+                        <use href={sprite + "#question"}></use>
                     </svg>
                 </div>
                 <div className="checkbox">
@@ -95,14 +64,14 @@ const selectStyles = {
             </div>
             <div className='container-input-rca'>
                 <div className='titlu-icon'>
-                <span className='titlu-select'>Domiciliul persoanei asigurate</span>
+                    <span className='titlu-select'>Domiciliul persoanei asigurate</span>
                     <svg className="question">
-                        <use href={sprite +"#question"}></use>
+                        <use href={sprite + "#question"}></use>
                     </svg>
                 </div>
-               <div className='dropdown'>
-                <Select classNamePrefix='custom-select'  isSearchable={false} options={ data } defaultValue={data[1]} styles={selectStyles} />
-               </div>
+                <div className='dropdown'>
+                   <MySelect data={data} placeholder='Alte localitati'/>
+                </div>
             </div>
         </div>
     );

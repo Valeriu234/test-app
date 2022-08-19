@@ -69,10 +69,11 @@ li {
 
 .container-for-arrow {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 70px;
+    width: 83px;
     height: 30px;
+    gap: 15px;
+
 
 
 }
@@ -126,7 +127,6 @@ li {
 
 .arrow-right {
     fill: white;
-    margin-left: 15px;
     width: 20px;
     height: 20px;
     transition: 0.2s ease;
@@ -138,13 +138,13 @@ li.container-for-arrow:hover {
     font-family: "PT Root UI";
     font-weight: 400;
     font-size: 16px;
+    gap: 10px;
 }
 
 li.container-for-arrow:hover  .arrow-right{
     fill: red;
     width: 25px;
     height: 30px;
-    margin-left: 10px;
 }
 
 .menu-list li {
@@ -375,4 +375,8 @@ li.container-for-arrow:hover  .arrow-right{
 
 .cards+title {
     width: 660px;
+}
+
+.disabled {
+    pointer-events: none;
 }

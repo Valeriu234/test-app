@@ -8,10 +8,19 @@
     align-items: center;
 }
 
+
+.right-bar-white-space {
+    width: 100px;
+    height: calc(100vh - 102px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .round {
     width: 35px;
     height: 35px;
-    border: 2px solid #42403F;
+    border: 2px solid #00834B;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -22,14 +31,44 @@
 .punct {
     width: 11px;
     height: 11px;
-    border: 1px solid #000000;
+    border: 1px solid #00834B;
     border-radius: 50%;
     background-color: #00834B;
 }
 
 .right-bar hr{
-    width: 2px;
+    width: 1px;
     height: 186px;
     background-color: #E7E5E4;
     border-width: 0;
+    border-radius: 3px;
+}
+
+
+.checked-punct {
+    width: 11px;
+    height: 11px;
+    border: 1px solid #00834B;
+    border-radius: 50%;
+    background-color: #00834B;
+}
+
+
+.checked-line {
+    width: 2px;
+    height: 186px;
+    background-color: #00834B;
+    border-width: 0;
+    border-radius: 3px;
+}
+
+.checked-round {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #00834B;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

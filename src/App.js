@@ -2,21 +2,54 @@
 import './App.css';
 import Header from "./Components/Header/Header";
 import LeftBar from "./Components/Left-bar/Left-bar";
-import RightBar from "./Components/Right-bar/Right-bar";
+import RightBarCasco from "./Components/Right-bar/Right-bar-casco";
 import CenterContent from "./Components/CenterContent/Center-content";
 import AfterContent from "./Components/After-content/After-content";
 import Offers from "./Components/Offers/Offers";
 import Recenzii from "./Components/Recenzii/Recenzii";
 import Footer from "./Components/Footer/Footer";
 import './assets/fonts/Fonts.css'
+import RightBarBook from "./Components/Right-bar/Right-bar-book";
+import RightBarRca from "./Components/Right-bar/Right-bar-rca";
+import RightBarWhiteContainer from "./Components/Right-bar/Right-bar-white-container";
+import {useState} from "react";
 
 function App() {
+
+    const [isMenu, setIsMenu] = useState(null)
+    const [countClick , setCountClick] = useState(1);
+
+
   return ( <div className='App'>
         <Header />
           <div className='content'>
         <LeftBar />
-              <CenterContent />
-          <RightBar/>
+              <CenterContent countClick={countClick} setCountClick={setCountClick} setIsMenu={setIsMenu} />
+              {isMenu === null && (
+                  <RightBarWhiteContainer/>
+              )}
+              {isMenu === 'Carte verde' && (
+                  <RightBarBook/>
+              )}
+              {isMenu === 'RCA' && (
+                  <RightBarRca/>
+              )}
+              {isMenu === 'Casco' && (
+                  <RightBarCasco/>
+              )}
+              {isMenu === 'Medicala' && (
+                  <RightBarWhiteContainer/>
+              )}
+              {isMenu === 'Accidente' && (
+                  <RightBarWhiteContainer/>
+              )}
+              {isMenu === 'Bunuri' && (
+                  <RightBarWhiteContainer/>
+              )}
+              {isMenu === 'Locuinte(imobile)' && (
+                  <RightBarWhiteContainer/>
+              )}
+
           </div>
           <AfterContent />
           <Offers />

@@ -1,6 +1,6 @@
 import styles from './Right-bar.css'
 
-const RightBar = () => {
+const RightBarCasco = () => {
     return (
         <div className='right-bar'>
             <div className="first-step round">
@@ -30,4 +30,4 @@ const RightBar = () => {
 }
 
 
-export default RightBar
+export default RightBarCasco
