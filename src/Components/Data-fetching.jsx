@@ -23,7 +23,11 @@ const DataFetching = ({changeDisabled}) => {
         })
     } ,[])
     useEffect(() =>{
-        console.log(appState)
+        if (appState.activeObject === null) {
+            changeDisabled(true)
+        }else if (appState.activeObject !== null) {
+            changeDisabled(false)
+        }
 
     },[appState])
 

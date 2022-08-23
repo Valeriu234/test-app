@@ -1,6 +1,6 @@
 import "./Center-content.css";
 import sprite from "../../images/center/sprite.svg";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import Center from "./Center";
 import DataFetching from "../Data-fetching";
 import Center2 from "./Center2";
@@ -17,8 +17,22 @@ import CarteVerde1 from "../Carte-Verde1/Carte-verde1";
 
 const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
     const [activeItem, setActiveItem] = useState(null);
-    const [state, setState] = useState(true)
     const [disabled, changeDisabled] = useState(true);
+    const [formValues, changeForumValues] = useState({
+        firstInput: false,
+        secondInput: false,
+        thirdInput: false,
+
+    })
+    const [lastPageFirstInput, setLastPageFirstInput] = useState(false);
+    const [lastPageSecondInput, setLastPageSecondInput] = useState(false);
+    const [lastPageThirdInput, setLastPageThirdInput] = useState(false);
+    const [fransiza, setFransiza] = useState(false)
+    const [faraFransiza, setFaraFransiza] = useState(false)
+    const [inputText, setInputText] = useState(false)
+    const [oneOfThree, setOneOfThree] = useState(false)
+    const [oneOfTwo, setOneOfTwo] = useState(false)
+    const [priceState, setPriceState] =useState(false)
     const items = [
         {
             id: 1,
@@ -50,6 +64,17 @@ const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
         },
     ];
 
+    useEffect(() => {
+        changeDisabled(true);
+        changeForumValues({ ...formValues,firstInput: false,secondInput: false,thirdInput: false})
+        setLastPageFirstInput(false);
+        setFransiza(false);
+        setFaraFransiza(false);
+        setOneOfThree(false);
+        setOneOfTwo(false)
+    }, [activeItem])
+
+
     return (
         <div className="center-content">
             <div className="top-tabs">
@@ -76,15 +101,15 @@ const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
             <div className="form">
                 <div className="center-section1 ">
                     {activeItem === items[2].id && (
-                        <Carousel countClick={countClick} setCountClick={setCountClick} disabled={disabled}>
+                        <Carousel setPriceState={setPriceState} oneOfThree={oneOfThree} inputText={inputText} fransiza={fransiza} faraFransiza={faraFransiza} formValues={formValues} changeFormValues={changeForumValues} countClick={countClick} setCountClick={setCountClick} changeDisabled={changeDisabled} disabled={disabled}>
                          <CarouselItem>
                             <DataFetching  changeDisabled={changeDisabled}/>
                          </CarouselItem>
                             <CarouselItem>
-                             <Slidercasco2 />
+                             <Slidercasco2 changeDisabled={changeDisabled} formValues={formValues} changeForumValues={changeForumValues} />
                             </CarouselItem>
                             <CarouselItem>
-                                <SliderCasco4 />
+                                <SliderCasco4 priceState={priceState} oneOfTwo={oneOfTwo} setOneOfTwo={setOneOfTwo} oneOfThree={oneOfThree} setOneOfThree={setOneOfThree} inputText={inputText} setInputText={setInputText} fransiza={fransiza} faraFransiza={faraFransiza} setFransiza={setFransiza} setFaraFransiza={setFaraFransiza} changeDisabled={changeDisabled} setLastPageFirstInput={setLastPageFirstInput}  lastPageFirstInput={lastPageFirstInput} setLastPageSecondInput={setLastPageSecondInput} lastPageSecondInput={lastPageSecondInput} setLastPageThirdInput={setLastPageThirdInput} lastPageThirdInput={lastPageThirdInput}   />
                             </CarouselItem>
                         </Carousel>
                     )}

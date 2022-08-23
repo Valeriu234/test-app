@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Select from "react-select";
 
-const MySelect = ({data, placeholder}) => {
+const MySelect = ({data, placeholder, changeForumValues,formValues, id}) => {
     const selectStyles = {
         control: (styles, state) =>
             ({
@@ -39,7 +39,6 @@ const MySelect = ({data, placeholder}) => {
                 color: isSelected || isFocused ? 'black' : '#42403F',
                 borderRadius: '7px 7px',
                 cursor: 'pointer'
-
             }
         },
         placeholder: (styles) => {
@@ -65,14 +64,26 @@ const MySelect = ({data, placeholder}) => {
             }
         }
 
-
     }
 
 
     return (
-        <Select classNamePrefix='custom-select' isSearchable={false} options={data} placeholder={placeholder}
-                styles={selectStyles}/>
-    );
+        <Select classNamePrefix='custom-select'  isSearchable={false} options={data} placeholder={placeholder}
+                styles={selectStyles}
+            onChange={() => {
+                if(id === '1') {
+                    changeForumValues({...formValues, firstInput : true})
+                    console.log(formValues)
+                }else if (id === '2') {
+                    changeForumValues({...formValues, secondInput: true})
+                    console.log(formValues)
+                }else if (id === '3') {
+                    changeForumValues({...formValues, fourthInput: true})
+                    console.log(formValues)
+                }
+            }} />
+
+    )
 };
 
 export default MySelect;

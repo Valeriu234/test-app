@@ -7,8 +7,16 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    display: none;
 
 }
+
+.active-final-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 
 .livrare {
     fill: red;
@@ -85,3 +93,20 @@
     margin-bottom: 40px;
 }
 
+.custom-input {
+    padding: 0px 15px;
+    height: 45px;
+    border: 1px solid #E7E5E4;
+    border-radius: 7px;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+}
+
+ .custom-input:focus {
+    border: 1px solid #A40731;
+     outline: none;
+}
