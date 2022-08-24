@@ -4,7 +4,7 @@ import users from  '../../images/header-icons/users.svg'
 import logo from '../../images/logo/Logo.svg'
 import styles from './Header.css'
 
-const Header = () => {
+const Header = ({register,setRegister}) => {
 return (<div className='header'>
         <div className='left'>
     <img className='menu-icon' src={menu1} alt=""/>
@@ -21,7 +21,9 @@ return (<div className='header'>
             <img className='log-in' src={users} alt=""/>
             <p className='text-right-items'>Logare</p>
         </div>
-            <div className='inregistrare'>
+            <div onClick={() => {
+               setRegister(true)
+            }} className='inregistrare'>
                 <img className='register' src={fileReg} alt=""/>
                 <p className='text-right-items'>Inregistrare</p>
             </div>

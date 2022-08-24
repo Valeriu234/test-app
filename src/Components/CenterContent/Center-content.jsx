@@ -13,9 +13,10 @@ import SliderRCA3 from "../Slider-RCA3/Slider-RCA3";
 import SliderRCA4 from "../Slider-RCA4/Slider-RCA4";
 import CarteVerde2 from "../Carte-Verde2/Carte-Verde2";
 import CarteVerde1 from "../Carte-Verde1/Carte-verde1";
+import Modal from "../UI/Modal/Modal";
 
 
-const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
+const CenterContent = ({setRegister, register, setIsMenu , setCountClick, countClick}) => {
     const [activeItem, setActiveItem] = useState(null);
     const [disabled, changeDisabled] = useState(true);
     const [formValues, changeForumValues] = useState({
@@ -32,7 +33,8 @@ const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
     const [inputText, setInputText] = useState(false)
     const [oneOfThree, setOneOfThree] = useState(false)
     const [oneOfTwo, setOneOfTwo] = useState(false)
-    const [priceState, setPriceState] =useState(false)
+    const [priceState, setPriceState] =useState(true)
+    const [modal, setModal] = useState(false);
     const items = [
         {
             id: 1,
@@ -68,11 +70,12 @@ const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
         changeDisabled(true);
         changeForumValues({ ...formValues,firstInput: false,secondInput: false,thirdInput: false})
         setLastPageFirstInput(false);
+        setLastPageSecondInput(false);
         setFransiza(false);
         setFaraFransiza(false);
         setOneOfThree(false);
-        setOneOfTwo(false)
-        setPriceState(true)
+        setOneOfTwo(false);
+        setPriceState(true);
     }, [activeItem])
 
 
@@ -102,7 +105,7 @@ const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
             <div className="form">
                 <div className="center-section1 ">
                     {activeItem === items[2].id && (
-                        <Carousel id='1' setPriceState={setPriceState} oneOfThree={oneOfThree} inputText={inputText} fransiza={fransiza} faraFransiza={faraFransiza} formValues={formValues} changeFormValues={changeForumValues} countClick={countClick} setCountClick={setCountClick} changeDisabled={changeDisabled} disabled={disabled}>
+                        <Carousel id='1' modal={modal} setModal={setModal} priceState={priceState} setPriceState={setPriceState} oneOfThree={oneOfThree} inputText={inputText} fransiza={fransiza} faraFransiza={faraFransiza} formValues={formValues} changeFormValues={changeForumValues} countClick={countClick} setCountClick={setCountClick} changeDisabled={changeDisabled} disabled={disabled}>
                          <CarouselItem>
                             <DataFetching  changeDisabled={changeDisabled}/>
                          </CarouselItem>
@@ -110,7 +113,7 @@ const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
                              <Slidercasco2 changeDisabled={changeDisabled} formValues={formValues} changeForumValues={changeForumValues} />
                             </CarouselItem>
                             <CarouselItem>
-                                <SliderCasco4 priceState={priceState} oneOfTwo={oneOfTwo} setOneOfTwo={setOneOfTwo} oneOfThree={oneOfThree} setOneOfThree={setOneOfThree} inputText={inputText} setInputText={setInputText} fransiza={fransiza} faraFransiza={faraFransiza} setFransiza={setFransiza} setFaraFransiza={setFaraFransiza} changeDisabled={changeDisabled} setLastPageFirstInput={setLastPageFirstInput}  lastPageFirstInput={lastPageFirstInput} setLastPageSecondInput={setLastPageSecondInput} lastPageSecondInput={lastPageSecondInput} setLastPageThirdInput={setLastPageThirdInput} lastPageThirdInput={lastPageThirdInput}   />
+                                <SliderCasco4 modal={modal} setModal={setModal} priceState={priceState} oneOfTwo={oneOfTwo} setOneOfTwo={setOneOfTwo} oneOfThree={oneOfThree} setOneOfThree={setOneOfThree} inputText={inputText} setInputText={setInputText} fransiza={fransiza} faraFransiza={faraFransiza} setFransiza={setFransiza} setFaraFransiza={setFaraFransiza} changeDisabled={changeDisabled} setLastPageFirstInput={setLastPageFirstInput}  lastPageFirstInput={lastPageFirstInput} setLastPageSecondInput={setLastPageSecondInput} lastPageSecondInput={lastPageSecondInput} setLastPageThirdInput={setLastPageThirdInput} lastPageThirdInput={lastPageThirdInput}   />
                             </CarouselItem>
                         </Carousel>
                     )}
@@ -150,6 +153,9 @@ const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
                     )}
                 </div>
             </div>
+            <Modal id='1' modal={modal} setModal={setModal}/>
+            <Modal id='2' setFirstModal={setModal} modal={register} setModal={setRegister}/>
+
         </div>
     );
 };

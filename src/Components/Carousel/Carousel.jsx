@@ -1,6 +1,7 @@
 import './Carousel.css'
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import sprite from '../../images/center/sprite.svg'
+import Modal from "../UI/Modal/Modal";
 
 export const CarouselItem = ({ children, width}) => {
     return (
@@ -10,10 +11,13 @@ export const CarouselItem = ({ children, width}) => {
     );
 };
 
-const Carousel = ({id, setPriceState, oneOfThree,changeFormValues,oneOfTwo,inputText, children, disabled,setCountClick,
-                      countClick,  formValues,changeForumValues, changeDisabled }) => {
+const Carousel = ({id, modal, setModal, priceState,setPriceState, oneOfThree,oneOfTwo,inputText, children, disabled,setCountClick,
+                        formValues, changeDisabled }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
+    const toggleModal = () => {
+        setModal(!modal);
+    };
 
     const updateIndex = (newIndex) => {
 
@@ -45,7 +49,11 @@ const Carousel = ({id, setPriceState, oneOfThree,changeFormValues,oneOfTwo,input
         }
     }
 
-
+  useEffect(() => {
+      if (priceState === false){
+          changeDisabled(false)
+      }
+  }, [priceState,modal])
 
     return (
         <div className="carousel">
@@ -55,6 +63,7 @@ const Carousel = ({id, setPriceState, oneOfThree,changeFormValues,oneOfTwo,input
                 })}
             </div>
             <div className="indicators">
+                <Modal/>
                 <button
                     onClick={() => {
                         updateIndex(activeIndex - 1);
@@ -83,12 +92,14 @@ const Carousel = ({id, setPriceState, oneOfThree,changeFormValues,oneOfTwo,input
                     <div className='container-button2'>
                         <span onClick={() => {
                             if (id === '1') {
-                                if (activeIndex === 2) {
+                                if (activeIndex === 2 && priceState === false) {
+                                    toggleModal()
+                                } else if (activeIndex === 2) {
                                     setPriceState(false)
                                     verify2()
                                 }
                             }
-                        }} className="buttons">{id === '1'?activeIndex !== 2? 'Inainte' : 'Vezi costul' : ''}</span>
+                        }} className="buttons">{id === '1'?activeIndex === 0 || activeIndex === 1? 'Inainte' : activeIndex === 2 && priceState === false ?'Finalizeaza comanda' : 'Vezi costul':activeIndex === 2? 'Vezi costul' : ''}</span>
                         {  id === '1'?activeIndex !== 2 && (
                             <svg className="arrow-left2">
                             <use href={sprite + "#arrow-right"}></use>

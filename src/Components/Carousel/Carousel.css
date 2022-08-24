@@ -65,6 +65,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
+    transition: text-indent 2s ;
 }
 .indicators {
     display: flex;
@@ -75,7 +76,6 @@
 }
 
 .container-button2 {
-    width: 150px;
     height: 45px;
     display: flex;
     justify-content: center;
@@ -85,5 +85,8 @@
     border-radius: 7px;
     background: #A40731;
     color:#FFFFFF;;
+    padding-right: 30px;
+    padding-left: 30px;
+
 }
 

@@ -18,13 +18,13 @@ function App() {
 
     const [isMenu, setIsMenu] = useState(null)
     const [countClick , setCountClick] = useState(1);
-
+    const [register, setRegister] = useState(false);
 
   return ( <div className='App'>
-        <Header />
+        <Header register={register} setRegister={setRegister} />
           <div className='content'>
         <LeftBar />
-              <CenterContent countClick={countClick} setCountClick={setCountClick} setIsMenu={setIsMenu} />
+              <CenterContent register={register} setRegister={setRegister} countClick={countClick} setCountClick={setCountClick} setIsMenu={setIsMenu} />
               {isMenu === null && (
                   <RightBarWhiteContainer/>
               )}

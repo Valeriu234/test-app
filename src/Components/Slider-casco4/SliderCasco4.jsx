@@ -2,11 +2,12 @@ import './SliderCasco4.css'
 import sprite from '../../images/center/sprite.svg'
 import livrare from '../../images/icons/image 7.png'
 import {useEffect,useState} from "react";
+import Modal from "../UI/Modal/Modal";
 
 
 
 
-const SliderCasco4 = ({ priceState, oneOfTwo,setOneOfTwo, oneOfThree , setOneOfThree, changeDisabled, inputText, setInputText, faraFransiza, fransiza, setFransiza, setFaraFransiza, lastPageFirstInput,lastPageSecondInput,lastPageThirdInput,setLastPageFirstInput,setLastPageSecondInput,setLastPageThirdInput}) => {
+const SliderCasco4 = ({ modal,setModal, priceState, oneOfTwo,setOneOfTwo, oneOfThree , setOneOfThree, changeDisabled, inputText, setInputText, faraFransiza, fransiza, setFransiza, setFaraFransiza, lastPageFirstInput,lastPageSecondInput,lastPageThirdInput,setLastPageFirstInput,setLastPageSecondInput,setLastPageThirdInput}) => {
     const arr =['Valera','Laura','Pentuchy'];
     const data = [
         {

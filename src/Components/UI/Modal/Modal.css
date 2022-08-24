@@ -1,0 +1,183 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: white;
+    padding: 30px 30px;
+    max-width: 600px;
+    min-width: 300px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
+
+
+.register-container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    width: 490px
+}
+
+.close-register {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+}
+
+
+.register-text {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+
+
+
+
+.all-register-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.have-acc-container {
+    display: flex;
+    gap: 10px;
+}
+
+.question-acc {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #42403F;
+}
+
+.log-in-acc {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #A40731;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.container-input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-register {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 9px 15px;
+    gap: 10px;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #42403F;
+    border: 1px solid #E7E5E4;
+    border-radius: 7px;
+    background: #FFFFFF;
+    transition: 0.5s all;
+
+}
+
+input:focus {
+    outline: none;
+  border :  1px solid #A40731;
+
+}
+
+input:hover {
+    border :  1px solid #A40731;
+    cursor: pointer;
+}
+
+input:hover::placeholder {
+    color: #A40731;
+}
+
+.termeni-conditii {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #616164;
+}
+
+.termeni-conditii-style {
+    background: linear-gradient(85.58deg, #A40731 -0.38%, #830B3A 41.27%, #002359 103.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.button-inregistrare {
+    background: #A40731;
+    border-radius: 7px;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    width: 100%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
