@@ -72,6 +72,7 @@ const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
         setFaraFransiza(false);
         setOneOfThree(false);
         setOneOfTwo(false)
+        setPriceState(true)
     }, [activeItem])
 
 
@@ -101,7 +102,7 @@ const CenterContent = ({setIsMenu , setCountClick, countClick}) => {
             <div className="form">
                 <div className="center-section1 ">
                     {activeItem === items[2].id && (
-                        <Carousel setPriceState={setPriceState} oneOfThree={oneOfThree} inputText={inputText} fransiza={fransiza} faraFransiza={faraFransiza} formValues={formValues} changeFormValues={changeForumValues} countClick={countClick} setCountClick={setCountClick} changeDisabled={changeDisabled} disabled={disabled}>
+                        <Carousel id='1' setPriceState={setPriceState} oneOfThree={oneOfThree} inputText={inputText} fransiza={fransiza} faraFransiza={faraFransiza} formValues={formValues} changeFormValues={changeForumValues} countClick={countClick} setCountClick={setCountClick} changeDisabled={changeDisabled} disabled={disabled}>
                          <CarouselItem>
                             <DataFetching  changeDisabled={changeDisabled}/>
                          </CarouselItem>

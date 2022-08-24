@@ -10,7 +10,8 @@ export const CarouselItem = ({ children, width}) => {
     );
 };
 
-const Carousel = ({ setPriceState, oneOfThree,changeFormValues,oneOfTwo,inputText, children, disabled,setCountClick,countClick,  formValues,changeForumValues, changeDisabled }) => {
+const Carousel = ({id, setPriceState, oneOfThree,changeFormValues,oneOfTwo,inputText, children, disabled,setCountClick,
+                      countClick,  formValues,changeForumValues, changeDisabled }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
 
@@ -21,7 +22,9 @@ const Carousel = ({ setPriceState, oneOfThree,changeFormValues,oneOfTwo,inputTex
         } else if (newIndex >= React.Children.count(children)) {
             newIndex = React.Children.count(children) - 1;
         }
-        setCountClick(newIndex + 1)
+        if (id === '1') {
+            setCountClick(newIndex + 1)
+        }
         setActiveIndex(newIndex)
     }
 
@@ -55,7 +58,9 @@ const Carousel = ({ setPriceState, oneOfThree,changeFormValues,oneOfTwo,inputTex
                 <button
                     onClick={() => {
                         updateIndex(activeIndex - 1);
-                        changeDisabled(false);
+                        if (id === '1') {
+                            changeDisabled(false);
+                        }
                     }} >
                     <div className="container-button1">
                         <svg className="arrow-left1">
@@ -66,25 +71,30 @@ const Carousel = ({ setPriceState, oneOfThree,changeFormValues,oneOfTwo,inputTex
                 </button>
                 <button className={`${disabled? 'disabled' : ''}`}  onClick={() => {
                       updateIndex(activeIndex + 1);
-                    changeDisabled(true)
-                    if(activeIndex === 0) {
-                        verify()
-                    }else if (activeIndex === 1){
-                        verify2()
-                    }
+                      if (id === '1') {
+                          changeDisabled(true)
+                          if (activeIndex === 0) {
+                              verify()
+                          } else if (activeIndex === 1) {
+                              verify2()
+                          }
+                      }
                 }}>
                     <div className='container-button2'>
                         <span onClick={() => {
-                            if (activeIndex === 2) {
-                             setPriceState(false)
-                                verify2()
+                            if (id === '1') {
+                                if (activeIndex === 2) {
+                                    setPriceState(false)
+                                    verify2()
+                                }
                             }
-                        }} className="buttons">{activeIndex !== 2? 'Inainte' : 'Vezi costul'}</span>
-                        {    activeIndex !== 2 && (
+                        }} className="buttons">{id === '1'?activeIndex !== 2? 'Inainte' : 'Vezi costul' : ''}</span>
+                        {  id === '1'?activeIndex !== 2 && (
                             <svg className="arrow-left2">
-                                <use href={sprite + "#arrow-right"}></use>
+                            <use href={sprite + "#arrow-right"}></use>
                             </svg>
-                        )
+                            )
+                        : ''
                         }
                     </div>
                 </button>
