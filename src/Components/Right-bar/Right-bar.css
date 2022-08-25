@@ -6,12 +6,14 @@
     justify-content: space-evenly;
     border-left: 1px solid #E7E5E4;
     align-items: center;
+    position: relative;
+    top: 50px;
 }
 
 
 .right-bar-white-space {
     width: 100px;
-    height: calc(100vh - 102px);
+    height: calc(100vh - 208px);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

@@ -14,9 +14,10 @@ import SliderRCA4 from "../Slider-RCA4/Slider-RCA4";
 import CarteVerde2 from "../Carte-Verde2/Carte-Verde2";
 import CarteVerde1 from "../Carte-Verde1/Carte-verde1";
 import Modal from "../UI/Modal/Modal";
+import BurgerMenu from "../UI/Burger-Menu/BurgerMenu";
 
 
-const CenterContent = ({setRegister, register, setIsMenu , setCountClick, countClick}) => {
+const CenterContent = ({ signIn, setSignIn, setRegister, register, setIsMenu , setCountClick, countClick}) => {
     const [activeItem, setActiveItem] = useState(null);
     const [disabled, changeDisabled] = useState(true);
     const [formValues, changeForumValues] = useState({
@@ -71,6 +72,7 @@ const CenterContent = ({setRegister, register, setIsMenu , setCountClick, countC
         changeForumValues({ ...formValues,firstInput: false,secondInput: false,thirdInput: false})
         setLastPageFirstInput(false);
         setLastPageSecondInput(false);
+        setLastPageThirdInput(false);
         setFransiza(false);
         setFaraFransiza(false);
         setOneOfThree(false);
@@ -154,7 +156,8 @@ const CenterContent = ({setRegister, register, setIsMenu , setCountClick, countC
                 </div>
             </div>
             <Modal id='1' modal={modal} setModal={setModal}/>
-            <Modal id='2' setFirstModal={setModal} modal={register} setModal={setRegister}/>
+            <Modal id='2' setFirstModal={setSignIn} modal={register} setModal={setRegister}/>
+            <Modal id='3' setFirstModal={setRegister} modal={signIn} setModal={setSignIn}/>
 
         </div>
     );

@@ -13,18 +13,24 @@ import RightBarBook from "./Components/Right-bar/Right-bar-book";
 import RightBarRca from "./Components/Right-bar/Right-bar-rca";
 import RightBarWhiteContainer from "./Components/Right-bar/Right-bar-white-container";
 import {useState} from "react";
+import BurgerMenu from "./Components/UI/Burger-Menu/BurgerMenu";
 
 function App() {
 
     const [isMenu, setIsMenu] = useState(null)
     const [countClick , setCountClick] = useState(1);
     const [register, setRegister] = useState(false);
+    const [signIn, setSignIn] = useState(false)
+    const [showMenu, setShowMenu] = useState(false)
 
   return ( <div className='App'>
-        <Header register={register} setRegister={setRegister} />
+          {  showMenu === true && (
+              <BurgerMenu setShowMenu={setShowMenu}/>
+          )}
+        <Header setShowMenu={setShowMenu} setSignIn={setSignIn}  setRegister={setRegister} />
           <div className='content'>
         <LeftBar />
-              <CenterContent register={register} setRegister={setRegister} countClick={countClick} setCountClick={setCountClick} setIsMenu={setIsMenu} />
+              <CenterContent signIn={signIn} setSignIn={setSignIn} register={register} setRegister={setRegister} countClick={countClick} setCountClick={setCountClick} setIsMenu={setIsMenu} />
               {isMenu === null && (
                   <RightBarWhiteContainer/>
               )}
