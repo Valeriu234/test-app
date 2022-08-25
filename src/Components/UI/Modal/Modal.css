@@ -17,6 +17,7 @@ body.active-modal {
     right: 0;
     bottom: 0;
     position: fixed;
+
 }
 
 .overlay {
@@ -218,4 +219,8 @@ input:hover::placeholder {
     padding-bottom: 9px;
     width: 100%;
 
+}
+
+.modal {
+    z-index: 7;
 }
