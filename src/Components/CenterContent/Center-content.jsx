@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react";
 import Center from "./Center";
 import DataFetching from "../Data-fetching";
 import Center2 from "./Center2";
-import Carousel,{ CarouselItem} from "../Carousel/Carousel";
+import Carousel, {CarouselItem} from "../Carousel/Carousel";
 import Slidercasco2 from "../Sliders-casco2/Slider-casco2";
 import SliderCasco4 from "../Slider-casco4/SliderCasco4";
 import SliderRca1 from "../Slider-RCA1/Slider-RCA1";
@@ -17,7 +17,7 @@ import Modal from "../UI/Modal/Modal";
 import BurgerMenu from "../UI/Burger-Menu/BurgerMenu";
 
 
-const CenterContent = ({ signIn, setSignIn, setRegister, register, setIsMenu , setCountClick, countClick}) => {
+const CenterContent = ({signIn, setSignIn, setRegister, register, setIsMenu, setCountClick, countClick}) => {
     const [activeItem, setActiveItem] = useState(null);
     const [disabled, changeDisabled] = useState(true);
     const [formValues, changeForumValues] = useState({
@@ -34,7 +34,7 @@ const CenterContent = ({ signIn, setSignIn, setRegister, register, setIsMenu , s
     const [inputText, setInputText] = useState(false)
     const [oneOfThree, setOneOfThree] = useState(false)
     const [oneOfTwo, setOneOfTwo] = useState(false)
-    const [priceState, setPriceState] =useState(true)
+    const [priceState, setPriceState] = useState(true)
     const [modal, setModal] = useState(false);
     const items = [
         {
@@ -69,7 +69,7 @@ const CenterContent = ({ signIn, setSignIn, setRegister, register, setIsMenu , s
 
     useEffect(() => {
         changeDisabled(true);
-        changeForumValues({ ...formValues,firstInput: false,secondInput: false,thirdInput: false})
+        changeForumValues({...formValues, firstInput: false, secondInput: false, thirdInput: false})
         setLastPageFirstInput(false);
         setLastPageSecondInput(false);
         setLastPageThirdInput(false);
@@ -77,7 +77,9 @@ const CenterContent = ({ signIn, setSignIn, setRegister, register, setIsMenu , s
         setFaraFransiza(false);
         setOneOfThree(false);
         setOneOfTwo(false);
+        setInputText(false);
         setPriceState(true);
+        setCountClick(0);
     }, [activeItem])
 
 
@@ -107,25 +109,57 @@ const CenterContent = ({ signIn, setSignIn, setRegister, register, setIsMenu , s
             <div className="form">
                 <div className="center-section1 ">
                     {activeItem === items[2].id && (
-                        <Carousel id='1' modal={modal} setModal={setModal} priceState={priceState} setPriceState={setPriceState} oneOfThree={oneOfThree} inputText={inputText} fransiza={fransiza} faraFransiza={faraFransiza} formValues={formValues} changeFormValues={changeForumValues} countClick={countClick} setCountClick={setCountClick} changeDisabled={changeDisabled} disabled={disabled}>
-                         <CarouselItem>
-                            <DataFetching  changeDisabled={changeDisabled}/>
-                         </CarouselItem>
+                        <Carousel id='1' modal={modal} setModal={setModal} priceState={priceState}
+                                  setPriceState={setPriceState} oneOfTwo={oneOfTwo} oneOfThree={oneOfThree}
+                                  inputText={inputText}
+                                  fransiza={fransiza} faraFransiza={faraFransiza} formValues={formValues}
+                                  changeFormValues={changeForumValues} countClick={countClick}
+                                  setCountClick={setCountClick} changeDisabled={changeDisabled} disabled={disabled}>
                             <CarouselItem>
-                             <Slidercasco2 changeDisabled={changeDisabled} formValues={formValues} changeForumValues={changeForumValues} />
+                                <DataFetching changeDisabled={changeDisabled}/>
                             </CarouselItem>
                             <CarouselItem>
-                                <SliderCasco4 modal={modal} setModal={setModal} priceState={priceState} oneOfTwo={oneOfTwo} setOneOfTwo={setOneOfTwo} oneOfThree={oneOfThree} setOneOfThree={setOneOfThree} inputText={inputText} setInputText={setInputText} fransiza={fransiza} faraFransiza={faraFransiza} setFransiza={setFransiza} setFaraFransiza={setFaraFransiza} changeDisabled={changeDisabled} setLastPageFirstInput={setLastPageFirstInput}  lastPageFirstInput={lastPageFirstInput} setLastPageSecondInput={setLastPageSecondInput} lastPageSecondInput={lastPageSecondInput} setLastPageThirdInput={setLastPageThirdInput} lastPageThirdInput={lastPageThirdInput}   />
+                                <Slidercasco2 changeDisabled={changeDisabled} formValues={formValues}
+                                              changeForumValues={changeForumValues}/>
+                            </CarouselItem>
+                            <CarouselItem>
+                                <SliderCasco4 modal={modal} setModal={setModal} priceState={priceState}
+                                              oneOfTwo={oneOfTwo} setOneOfTwo={setOneOfTwo} oneOfThree={oneOfThree}
+                                              setOneOfThree={setOneOfThree} inputText={inputText}
+                                              setInputText={setInputText} fransiza={fransiza}
+                                              faraFransiza={faraFransiza} setFransiza={setFransiza}
+                                              setFaraFransiza={setFaraFransiza} changeDisabled={changeDisabled}
+                                              setLastPageFirstInput={setLastPageFirstInput}
+                                              lastPageFirstInput={lastPageFirstInput}
+                                              setLastPageSecondInput={setLastPageSecondInput}
+                                              lastPageSecondInput={lastPageSecondInput}
+                                              setLastPageThirdInput={setLastPageThirdInput}
+                                              lastPageThirdInput={lastPageThirdInput}/>
                             </CarouselItem>
                         </Carousel>
                     )}
                     {activeItem === items[1].id && (
-                        <Carousel>
+                        <Carousel id='2' secondPageRCA={faraFransiza} disabled={disabled}
+                                  changeDisabled={changeDisabled} countClick={countClick}
+                                  firstInputRCA={lastPageFirstInput} oneOfTwo={oneOfTwo} selectFirstPageRCA={fransiza}>
                             <CarouselItem>
-                             <SliderRca1/>
+                                <SliderRca1 lastPageFirstInput={lastPageFirstInput}
+                                            setLastPageFirstInput={setLastPageFirstInput}
+                                            changeDisabled={changeDisabled}
+                                            setLastPageSecondInput={setLastPageSecondInput}
+                                            lastPageSecondInput={lastPageSecondInput}
+                                            setLastPageThirdInput={setLastPageThirdInput}
+                                            lastPageThirdInput={lastPageThirdInput}
+                                            fransiza={fransiza}
+                                            setFransiza={setFransiza}
+                                            setOneOfTwo={setOneOfTwo}
+                                            oneOfTwo={oneOfTwo}
+                                />
+
+
                             </CarouselItem>
                             <CarouselItem>
-                                <SliderRca2/>
+                                <SliderRca2 setSecondPageRCA={setFaraFransiza} changeDisabled={changeDisabled}/>
                             </CarouselItem>
                             <CarouselItem>
                                 <SliderRCA3/>
@@ -136,22 +170,22 @@ const CenterContent = ({ signIn, setSignIn, setRegister, register, setIsMenu , s
                         </Carousel>
                     )}
                     {activeItem === items[0].id && (
-                        <Carousel >
+                        <Carousel>
                             <CarouselItem>
                                 <CarteVerde1/>
                             </CarouselItem>
-                        <CarouselItem>
-                            <CarteVerde2/>
-                        </CarouselItem>
+                            <CarouselItem>
+                                <CarteVerde2/>
+                            </CarouselItem>
                         </Carousel>
                     )}
                 </div>
                 <div className="center-section2">
-                    {activeItem === items[2].id  && (
-                        <Center2 />
+                    {activeItem === items[2].id && (
+                        <Center2/>
                     )}
                     {activeItem === items[1].id && (
-                             <Center2 />
+                        <Center2/>
                     )}
                 </div>
             </div>

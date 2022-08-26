@@ -1,4 +1,3 @@
-
 import './App.css';
 import Header from "./Components/Header/Header";
 import LeftBar from "./Components/Left-bar/Left-bar";
@@ -18,52 +17,53 @@ import BurgerMenu from "./Components/UI/Burger-Menu/BurgerMenu";
 function App() {
 
     const [isMenu, setIsMenu] = useState(null)
-    const [countClick , setCountClick] = useState(1);
+    const [countClick, setCountClick] = useState(0);
     const [register, setRegister] = useState(false);
     const [signIn, setSignIn] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
 
-  return ( <div className='App'>
-          {  showMenu === true && (
-              <BurgerMenu setShowMenu={setShowMenu}/>
-          )}
-        <Header setShowMenu={setShowMenu} setSignIn={setSignIn}  setRegister={setRegister} />
-          <div className='content'>
-        <LeftBar />
-              <CenterContent signIn={signIn} setSignIn={setSignIn} register={register} setRegister={setRegister} countClick={countClick} setCountClick={setCountClick} setIsMenu={setIsMenu} />
-              {isMenu === null && (
-                  <RightBarWhiteContainer/>
-              )}
-              {isMenu === 'Carte verde' && (
-                  <RightBarBook/>
-              )}
-              {isMenu === 'RCA' && (
-                  <RightBarRca/>
-              )}
-              {isMenu === 'Casco' && (
-                  <RightBarCasco/>
-              )}
-              {isMenu === 'Medicala' && (
-                  <RightBarWhiteContainer/>
-              )}
-              {isMenu === 'Accidente' && (
-                  <RightBarWhiteContainer/>
-              )}
-              {isMenu === 'Bunuri' && (
-                  <RightBarWhiteContainer/>
-              )}
-              {isMenu === 'Locuinte(imobile)' && (
-                  <RightBarWhiteContainer/>
-              )}
+    return (<div className='App'>
+            {showMenu === true && (
+                <BurgerMenu setShowMenu={setShowMenu}/>
+            )}
+            <Header setShowMenu={setShowMenu} setSignIn={setSignIn} setRegister={setRegister}/>
+            <div className='content'>
+                <LeftBar/>
+                <CenterContent signIn={signIn} setSignIn={setSignIn} register={register} setRegister={setRegister}
+                               countClick={countClick} setCountClick={setCountClick} setIsMenu={setIsMenu}/>
+                {isMenu === null && (
+                    <RightBarWhiteContainer/>
+                )}
+                {isMenu === 'Carte verde' && (
+                    <RightBarBook/>
+                )}
+                {isMenu === 'RCA' && (
+                    <RightBarRca/>
+                )}
+                {isMenu === 'Casco' && (
+                    <RightBarCasco countClick={countClick} setCountClick={setCountClick}/>
+                )}
+                {isMenu === 'Medicala' && (
+                    <RightBarWhiteContainer/>
+                )}
+                {isMenu === 'Accidente' && (
+                    <RightBarWhiteContainer/>
+                )}
+                {isMenu === 'Bunuri' && (
+                    <RightBarWhiteContainer/>
+                )}
+                {isMenu === 'Locuinte(imobile)' && (
+                    <RightBarWhiteContainer/>
+                )}
 
-          </div>
-          <AfterContent />
-          <Offers />
-          <Recenzii />
-          <Footer/>
-      </div>
+            </div>
+            <AfterContent/>
+            <Offers/>
+            <Recenzii/>
+            <Footer/>
+        </div>
 
-  );
+    );
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Select from "react-select";
 
-const MySelect = ({data, placeholder, changeForumValues,formValues, id}) => {
+const MySelect = ({data, placeholder, changeForumValues, formValues, id}) => {
     const selectStyles = {
         control: (styles, state) =>
             ({
@@ -28,13 +28,14 @@ const MySelect = ({data, placeholder, changeForumValues,formValues, id}) => {
             flexDirection: 'column',
             padding: '0',
         }),
-        menu : (styles) => ({
+        menu: (styles) => ({
             ...styles, borderRadius: '7px',
-            border : '1px solid gray'
+            border: '1px solid gray'
         }),
         option: (styles, {data, isFocused, isDisabled, isSelected}) => {
 
-            return {...styles, height: '45px',
+            return {
+                ...styles, height: '45px',
                 backgroundColor: isFocused ? '#F9F9F9' : 'white',
                 color: isSelected || isFocused ? 'black' : '#42403F',
                 borderRadius: '7px 7px',
@@ -42,8 +43,9 @@ const MySelect = ({data, placeholder, changeForumValues,formValues, id}) => {
             }
         },
         placeholder: (styles) => {
-            return {...styles,
-              color:'#42403F',
+            return {
+                ...styles,
+                color: '#42403F',
                 lineHeight: '27px',
                 fontSize: '18px',
                 paddingLeft: '7px',
@@ -53,8 +55,9 @@ const MySelect = ({data, placeholder, changeForumValues,formValues, id}) => {
             }
         },
         singleValue: (styles) => {
-            return {...styles,
-                color:'#42403F',
+            return {
+                ...styles,
+                color: '#42403F',
                 lineHeight: '27px',
                 fontSize: '18px',
                 paddingLeft: '7px',
@@ -68,20 +71,22 @@ const MySelect = ({data, placeholder, changeForumValues,formValues, id}) => {
 
 
     return (
-        <Select classNamePrefix='custom-select'  isSearchable={false} options={data} placeholder={placeholder}
+        <Select classNamePrefix='custom-select' isSearchable={false} options={data} placeholder={placeholder}
                 styles={selectStyles}
-            onChange={() => {
-                if(id === '1') {
-                    changeForumValues({...formValues, firstInput : true})
-                    console.log(formValues)
-                }else if (id === '2') {
-                    changeForumValues({...formValues, secondInput: true})
-                    console.log(formValues)
-                }else if (id === '3') {
-                    changeForumValues({...formValues, fourthInput: true})
-                    console.log(formValues)
-                }
-            }} />
+                onChange={() => {
+                    if (id === '1') {
+                        changeForumValues({...formValues, firstInput: true})
+                        console.log(formValues)
+                    } else if (id === '2') {
+                        changeForumValues({...formValues, secondInput: true})
+                        console.log(formValues)
+                    } else if (id === '3') {
+                        changeForumValues({...formValues, fourthInput: true})
+                        console.log(formValues)
+                    } else if (id === '4') {
+                        changeForumValues(true)
+                    }
+                }}/>
 
     )
 };

@@ -1,29 +1,30 @@
 import styles from './Right-bar.css'
+import check from '../../images/icons/burger-icons/check.png'
 
-const RightBarCasco = () => {
+const RightBarCasco = ({countClick, setCountClick}) => {
     return (
         <div className='right-bar'>
             <div className="first-step round">
-             <div className="punct">
-             </div>
+                <div className="punct">
+                </div>
             </div>
-            <hr/>
-            <div className="second-step round">
-               <div className="count">
-                      1
-               </div>
+            <hr className={countClick > 0 ? 'checked-line' : 'hr'}/>
+            <div className={`second-step ${countClick > 0 ? ' checked-round' : ' round'}`}>
+                {countClick > 0 && (<img src={check} alt="check"/>
+                )}
+                {countClick <= 0 && (<>1</>)}
             </div>
-            <hr/>
-            <div className="third-step round">
-               <div className="count">
-                       2
-               </div>
+            <hr className={countClick >= 2 ? 'checked-line' : 'hr'}/>
+            <div className={`second-step ${countClick >= 2 ? ' checked-round' : ' round'}`}>
+                {countClick >= 2 && (<img src={check} alt="check"/>
+                )}
+                {countClick < 2 && (2)}
             </div>
-            <hr/>
-            <div className="fourth-step round">
-               <div className="count">
-                        3
-               </div>
+            <hr className={countClick === 3 ? 'checked-line' : 'hr'}/>
+            <div className={`second-step ${countClick === 3 ? ' checked-round' : ' round'}`}>
+                {countClick === 3 && (<img src={check} alt="check"/>
+                )}
+                {countClick < 3 && (2)}
             </div>
         </div>
     )

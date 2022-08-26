@@ -1,9 +1,22 @@
 import './Slider-RCA1.css'
 import sprite from '../../images/center/sprite.svg'
 import MySelect from "../UI/MySelect";
+import {useEffect} from "react";
 
 
-function SliderRca1() {
+function SliderRca1({
+                        changeDisabled,
+                        setLastPageFirstInput,
+                        lastPageFirstInput,
+                        setLastPageSecondInput,
+                        setLastPageThirdInput,
+                        lastPageSecondInput,
+                        lastPageThirdInput,
+                        fransiza,
+                        setFransiza,
+                        setOneOfTwo,
+                        oneOfTwo,
+                    }) {
 
     const data = [
         {
@@ -15,6 +28,53 @@ function SliderRca1() {
             label: "Alte localitati"
         }
     ];
+
+    useEffect(() => {
+        if (lastPageThirdInput === true || lastPageSecondInput === true) {
+            setOneOfTwo(true)
+        } else {
+            setOneOfTwo(false)
+        }
+    }, [lastPageThirdInput, lastPageSecondInput])
+
+    useEffect(() => {
+        if (oneOfTwo === true && lastPageFirstInput === true && fransiza === true) {
+            changeDisabled(false)
+        } else {
+            changeDisabled(true)
+        }
+    }, [lastPageFirstInput, oneOfTwo, fransiza])
+
+
+    const handleChange1 = (event) => {
+        if (event.target.checked) {
+            console.log('✅ Checkbox is checked');
+            setLastPageFirstInput(true)
+        } else {
+            console.log('⛔️ Checkbox is NOT checked');
+            setLastPageFirstInput(false)
+        }
+    };
+
+    const handleChange2 = (event) => {
+        if (event.target.checked) {
+            console.log('✅ Checkbox is checked');
+            setLastPageSecondInput(true)
+        } else {
+            console.log('⛔️ Checkbox is NOT checked');
+            setLastPageSecondInput(false)
+        }
+    };
+    const handleChange3 = (event) => {
+        if (event.target.checked) {
+            console.log('✅ Checkbox is checked');
+            setLastPageThirdInput(true)
+        } else {
+            console.log('⛔️ Checkbox is NOT checked');
+            setLastPageThirdInput(false)
+        }
+    };
+
 
     return (
         <div className='slider-rca1'>
@@ -29,7 +89,7 @@ function SliderRca1() {
                 <div className="checkbox">
                     <div className='button-check'>
                         <label className="container">
-                            <input type="checkbox" width='16px' height='16px'/>
+                            <input onChange={handleChange1} type="checkbox" width='16px' height='16px'/>
                             <span className="checkmark"></span>
                         </label>
                         <p className='text-checkbox'>Republica Moldova</p>
@@ -46,17 +106,17 @@ function SliderRca1() {
                 <div className="checkbox">
                     <div className='button-check'>
                         <label className="container">
-                            <input type="checkbox" width='16px' height='16px'/>
+                            <input onChange={handleChange2} type="checkbox" width='16px' height='16px'/>
                             <span className="checkmark"></span>
                         </label>
-                        <p className='text-checkbox'>Ucraina, Belarus</p>
+                        <p className='text-checkbox'>Fizica</p>
                     </div>
                     <div className='button-check'>
                         <label className="container">
-                            <input type="checkbox" width='16px' height='16px'/>
+                            <input type="checkbox" onChange={handleChange3} width='16px' height='16px'/>
                             <span className="checkmark"></span>
                         </label>
-                        <p className='text-checkbox'>Ucraina, Belarus</p>
+                        <p className='text-checkbox'>Juridica</p>
                     </div>
                 </div>
 
@@ -70,7 +130,7 @@ function SliderRca1() {
                     </svg>
                 </div>
                 <div className='dropdown'>
-                   <MySelect data={data} placeholder='Alte localitati'/>
+                    <MySelect id='4' changeForumValues={setFransiza} data={data} placeholder='Alte localitati'/>
                 </div>
             </div>
         </div>
