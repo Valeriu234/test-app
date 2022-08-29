@@ -4,7 +4,7 @@ import check from '../../images/icons/burger-icons/check.png'
 const RightBarCasco = ({countClick, setCountClick}) => {
     return (
         <div className='right-bar'>
-            <div className="first-step round">
+            <div className="first-step first-round">
                 <div className="punct">
                 </div>
             </div>
@@ -24,7 +24,7 @@ const RightBarCasco = ({countClick, setCountClick}) => {
             <div className={`second-step ${countClick === 3 ? ' checked-round' : ' round'}`}>
                 {countClick === 3 && (<img src={check} alt="check"/>
                 )}
-                {countClick < 3 && (2)}
+                {countClick < 3 && (3)}
             </div>
         </div>
     )

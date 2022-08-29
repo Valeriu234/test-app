@@ -17,11 +17,26 @@ body.active-modal {
     right: 0;
     bottom: 0;
     position: fixed;
+
+}
+
+.overlay-burger {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all;
+    z-index: 5;
 }
 
 .overlay {
-    background: rgba(49,49,49,0.8);
+    background: rgba(0, 0, 0, 0.5);
 }
+
 .modal-content {
     position: absolute;
     top: 50%;
@@ -70,9 +85,6 @@ body.active-modal {
     line-height: 48px;
     margin-bottom: 30px;
 }
-
-
-
 
 
 .all-register-content {
@@ -135,12 +147,12 @@ body.active-modal {
 
 input:focus {
     outline: none;
-  border :  1px solid #A40731;
+    border: 1px solid #A40731;
 
 }
 
 input:hover {
-    border :  1px solid #A40731;
+    border: 1px solid #A40731;
     cursor: pointer;
 }
 
@@ -221,5 +233,5 @@ input:hover::placeholder {
 }
 
 .modal {
-    z-index: 5;
+    z-index: 7;
 }

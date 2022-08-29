@@ -2,9 +2,9 @@
     width: 1300px;
     display: flex;
     flex-direction: column;
-    }
+}
 
-.item{
+.item {
     list-style-type: none;
     padding: 9px 30px;
     font-family: 'PT Root UI';
@@ -37,6 +37,7 @@ ul {
     background: linear-gradient(85.58deg, #A40731 -0.38%, #830B3A 41.27%, #002359 103.58%);
     box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
     border-radius: 7px;
+    margin-top: 120px;
 }
 
 .top-tabs h3 {
@@ -73,7 +74,6 @@ li {
     width: 83px;
     height: 30px;
     gap: 15px;
-
 
 
 }
@@ -141,14 +141,14 @@ li.container-for-arrow:hover {
     gap: 10px;
 }
 
-li.container-for-arrow:hover  .arrow-right{
+li.container-for-arrow:hover .arrow-right {
     fill: red;
     width: 25px;
     height: 30px;
 }
 
 .menu-list li {
-    transition:0.3s;
+    transition: 0.3s;
 }
 
 .valera {
@@ -188,7 +188,7 @@ li.container-for-arrow:hover  .arrow-right{
     box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
     border-radius: 7px;
     cursor: pointer;
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
     white-space: initial;
 }
 
@@ -245,6 +245,7 @@ li.container-for-arrow:hover  .arrow-right{
     cursor: pointer;
     box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
 }
+
 .menu-description2 {
     width: 620px;
     background: #FFFFFF;
@@ -259,6 +260,20 @@ li.container-for-arrow:hover  .arrow-right{
     border-radius: 7px;
 }
 
+.menu-description2-active {
+    width: 620px;
+    background: #FFFFFF;
+    border-radius: 7px 7px 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 20px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+}
+
 .title-description {
     font-family: 'PT Root UI';
     font-style: normal;
@@ -271,19 +286,25 @@ li.container-for-arrow:hover  .arrow-right{
     width: 18px;
     height: 18px;
     fill: #A40731;
+    transition: 0.5s all;
 }
+
+.close-rotate {
+    transform: rotate(225deg);
+}
+
 .close2 {
     width: 18px;
     height: 18px;
     fill: #A40731;
+    transition: 0.5s all;
 }
-
 
 
 .description-text-container2 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px;
     width: 620px;
     border-top: rgb(164, 7, 49, 0.1) solid 1px;
@@ -292,7 +313,12 @@ li.container-for-arrow:hover  .arrow-right{
     opacity: 1;
     height: 200px;
     visibility: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
+.description-p {
+    width: 570px
 }
 
 .container-big {
@@ -350,7 +376,7 @@ li.container-for-arrow:hover  .arrow-right{
 }
 
 
-.description-text-container2.hided {
+.hided {
     opacity: 0;
     height: 0;
     transition: all 0.3s ease;
@@ -358,7 +384,7 @@ li.container-for-arrow:hover  .arrow-right{
 
 }
 
-.description-text-container2.hided .text-paragraph{
+.description-text-container2.hided .text-paragraph {
     height: 0;
     opacity: 0;
     transition: all .3s;
@@ -373,10 +399,43 @@ li.container-for-arrow:hover  .arrow-right{
     line-height: 36px;
 }
 
-.cards+title {
+.cards + title {
     width: 660px;
 }
 
 .disabled {
     pointer-events: none;
+}
+
+
+.description-text-container2::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.description-text-container2::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.description-text-container2::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 5px;
+
+}
+
+.description-text-container2-book1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    width: 620px;
+    border-top: rgb(164, 7, 49, 0.1) solid 1px;
+    background-color: #FFFFFF;
+    transition: all 0.3s;
+    opacity: 1;
+    height: 120px;
+    visibility: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
 }

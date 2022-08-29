@@ -15,6 +15,8 @@ import CarteVerde2 from "../Carte-Verde2/Carte-Verde2";
 import CarteVerde1 from "../Carte-Verde1/Carte-verde1";
 import Modal from "../UI/Modal/Modal";
 import BurgerMenu from "../UI/Burger-Menu/BurgerMenu";
+import Center3 from "./Center3";
+import Center4 from "./Center4";
 
 
 const CenterContent = ({signIn, setSignIn, setRegister, register, setIsMenu, setCountClick, countClick}) => {
@@ -36,6 +38,32 @@ const CenterContent = ({signIn, setSignIn, setRegister, register, setIsMenu, set
     const [oneOfTwo, setOneOfTwo] = useState(false)
     const [priceState, setPriceState] = useState(true)
     const [modal, setModal] = useState(false);
+    const [thirdPageRCA, setThirdPageRCA] = useState({
+        firstSelect: false,
+        secondSelect: false,
+        thirdSelect: false
+    })
+    const [fourthPageRCA, setFourthPageRCA] = useState({
+        firstCheckbox: false,
+        secondCheckbox: false,
+        thirdCheckbox: false,
+        fourthCheckbox: false,
+        fivethCheckbox: false,
+        sixthCheckbox: false,
+        firstOneOfTwo: false,
+        secondOneOfTwo: false,
+        thirdOneOfTwo: false
+    })
+
+    const [carteVerde1, setCarteVerde1] = useState(false)
+    const [carteVerde2, setCarteVerde2] = useState({
+        firstCheckbox: false,
+        secondCheckbox: false,
+        thirdCheckbox: false,
+        radioInput: false,
+        oneOfThree: false
+    })
+
     const items = [
         {
             id: 1,
@@ -68,6 +96,11 @@ const CenterContent = ({signIn, setSignIn, setRegister, register, setIsMenu, set
     ];
 
     useEffect(() => {
+        setActiveItem(null)
+        setIsMenu(null)
+    }, [modal])
+
+    useEffect(() => {
         changeDisabled(true);
         changeForumValues({...formValues, firstInput: false, secondInput: false, thirdInput: false})
         setLastPageFirstInput(false);
@@ -80,6 +113,12 @@ const CenterContent = ({signIn, setSignIn, setRegister, register, setIsMenu, set
         setInputText(false);
         setPriceState(true);
         setCountClick(0);
+        setThirdPageRCA({
+            firstSelect: false,
+            secondSelect: false,
+            thirdSelect: false
+        })
+        setCarteVerde1(false)
     }, [activeItem])
 
 
@@ -141,7 +180,11 @@ const CenterContent = ({signIn, setSignIn, setRegister, register, setIsMenu, set
                     {activeItem === items[1].id && (
                         <Carousel id='2' secondPageRCA={faraFransiza} disabled={disabled}
                                   changeDisabled={changeDisabled} countClick={countClick}
-                                  firstInputRCA={lastPageFirstInput} oneOfTwo={oneOfTwo} selectFirstPageRCA={fransiza}>
+                                  firstInputRCA={lastPageFirstInput} oneOfTwo={oneOfTwo} selectFirstPageRCA={fransiza}
+                                  thirdPageRCA={thirdPageRCA} fourthPageRCA={fourthPageRCA}
+                                  priceState={priceState} setPriceState={setPriceState}
+                                  setModal={setModal} setCountClick={setCountClick} modal={modal}>
+
                             <CarouselItem>
                                 <SliderRca1 lastPageFirstInput={lastPageFirstInput}
                                             setLastPageFirstInput={setLastPageFirstInput}
@@ -162,20 +205,32 @@ const CenterContent = ({signIn, setSignIn, setRegister, register, setIsMenu, set
                                 <SliderRca2 setSecondPageRCA={setFaraFransiza} changeDisabled={changeDisabled}/>
                             </CarouselItem>
                             <CarouselItem>
-                                <SliderRCA3/>
+                                <SliderRCA3 thirdPageRCA={thirdPageRCA} setThirdPageRCA={setThirdPageRCA}
+                                            changeDisabled={changeDisabled}/>
                             </CarouselItem>
                             <CarouselItem>
-                                <SliderRCA4/>
+                                <SliderRCA4 fourthPageRCA={fourthPageRCA} setFourthPageRCA={setFourthPageRCA}
+                                            changeDisabled={changeDisabled} priceState={priceState}
+                                            setPriceState={setPriceState}/>
                             </CarouselItem>
                         </Carousel>
                     )}
                     {activeItem === items[0].id && (
-                        <Carousel>
+                        <Carousel disabled={disabled} changeDisabled={changeDisabled} priceState={priceState}
+                                  setPriceState={setPriceState}
+                                  id='3' countClick={countClick}
+                                  setCountClick={setCountClick}
+                                  carteVerde2={carteVerde2}
+                                  carteVerde1={carteVerde1}
+                                  setModal={setModal} modal={modal}>
                             <CarouselItem>
-                                <CarteVerde1/>
+                                <CarteVerde1 carteVerde1={carteVerde1} setCarteVerde1={setCarteVerde1}
+                                             changeDisabled={changeDisabled}/>
                             </CarouselItem>
                             <CarouselItem>
-                                <CarteVerde2/>
+                                <CarteVerde2 priceState={priceState} carteVerde2={carteVerde2}
+                                             setCarteVerde2={setCarteVerde2}
+                                             changeDisabled={changeDisabled}/>
                             </CarouselItem>
                         </Carousel>
                     )}
@@ -185,7 +240,11 @@ const CenterContent = ({signIn, setSignIn, setRegister, register, setIsMenu, set
                         <Center2/>
                     )}
                     {activeItem === items[1].id && (
-                        <Center2/>
+                        <Center4/>
+                    )}
+
+                    {activeItem === items[0].id && (
+                        <Center3/>
                     )}
                 </div>
             </div>

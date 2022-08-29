@@ -7,38 +7,36 @@ import {number} from "prop-types";
 const DataFetching = ({changeDisabled}) => {
     const [appState, changeState] = useState({
         activeObject: null,
-        objects : []
+        objects: []
     })
 
 
-
     useEffect(() => {
-    axios.get('http://localhost:3000/cards')
-        .then(res => {
-            changeState({...appState,objects:res.data})
-            console.log(res.data)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-    } ,[])
-    useEffect(() =>{
+        axios.get('http://localhost:3000/cards')
+            .then(res => {
+                changeState({...appState, objects: res.data})
+                console.log(res.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }, [])
+    useEffect(() => {
         if (appState.activeObject === null) {
             changeDisabled(true)
-        }else if (appState.activeObject !== null) {
+        } else if (appState.activeObject !== null) {
             changeDisabled(false)
         }
 
-    },[appState])
+    }, [appState])
 
     const toggleActive = (index) => {
-        changeState({ ...appState, activeObject: appState.objects[index] });
+        changeState({...appState, activeObject: appState.objects[index]});
         if (appState.activeObject === null) {
             changeDisabled(false)
         }
 
     }
-
 
 
     const toggleActiveStyles = (index) => {
@@ -50,23 +48,22 @@ const DataFetching = ({changeDisabled}) => {
     }
 
 
-
-    return ( <div className='cards+title'>
+    return (<div className='cards+title'>
             <h4 className='slider1-title'>Alege tipul autovehiculului</h4>
-        <div className='container-for-cards'>
-            {
-                appState.objects.map((post,index) => {
-                    return (
-                    <div onClick={() => toggleActive(index)} className={toggleActiveStyles(index)} key={index}>
-                        <svg className="icon-cars">
-                            <use href={sprite + post.id}></use>
-                        </svg>
-                        <h4 className='card-description'>{post.description}</h4>
-                    </div>
-                    )
-                })
-            }
-        </div>
+            <div className='container-for-cards'>
+                {
+                    appState.objects.map((post, index) => {
+                        return (
+                            <div onClick={() => toggleActive(index)} className={toggleActiveStyles(index)} key={index}>
+                                <svg className="icon-cars">
+                                    <use href={sprite + post.id}></use>
+                                </svg>
+                                <h4 className={appState.objects[index] === appState.activeObject ? 'active-card-description' : 'card-description'}>{post.description}</h4>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

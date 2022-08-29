@@ -1,23 +1,24 @@
 import React from 'react';
+import check from "../../images/icons/burger-icons/check.png";
 
-const RightBarBook = () => {
+const RightBarBook = ({countClick, setCountClick}) => {
     return (
         <div className='right-bar'>
-            <div className="first-step round">
+            <div className="first-step first-round">
                 <div className="punct">
                 </div>
             </div>
-            <hr/>
-            <div className="second-step round">
-                <div className="count">
-                    1
-                </div>
+            <hr className={countClick > 0 ? 'checked-line-book' : 'line-book'}/>
+            <div className={`second-step ${countClick > 0 ? ' checked-round' : ' round'}`}>
+                {countClick > 0 && (<img src={check} alt="check"/>
+                )}
+                {countClick <= 0 && (<>1</>)}
             </div>
-            <hr/>
-            <div className="third-step round">
-                <div className="count">
-                    2
-                </div>
+            <hr className={countClick === 2 ? 'checked-line-book' : 'line-book'}/>
+            <div className={`second-step ${countClick === 2 ? ' checked-round' : ' round'}`}>
+                {countClick === 2 && (<img src={check} alt="check"/>
+                )}
+                {countClick < 2 && (2)}
             </div>
 
         </div>

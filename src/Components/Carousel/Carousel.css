@@ -1,5 +1,5 @@
 .carousel {
-   overflow: hidden;
+    overflow: hidden;
     flex-direction: row;
     width: 680px;
 
@@ -18,14 +18,14 @@
 
 .arrow-left1 {
     box-sizing: border-box;
-    fill:  #1B1918;
+    fill: #1B1918;
     width: 20px;
     height: 20px;
 }
 
 .arrow-left2 {
     box-sizing: border-box;
-   fill: #FFFFFF;
+    fill: #FFFFFF;
     width: 20px;
     height: 20px;
 }
@@ -47,7 +47,8 @@
     background-color: #A40731;
     color: white;
 }
-.container-button1:hover svg{
+
+.container-button1:hover svg {
     fill: white;
 }
 
@@ -57,16 +58,18 @@
 }
 
 .container-button2:hover svg {
-    fill:  #1B1918;
+    fill: #1B1918;
 }
+
 .buttons {
     font-family: 'PT Root UI';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
-    transition: text-indent 2s ;
+    transition: text-indent 2s;
 }
+
 .indicators {
     display: flex;
     justify-content: space-between;
@@ -84,7 +87,7 @@
     border: 1px solid #A40731;
     border-radius: 7px;
     background: #A40731;
-    color:#FFFFFF;;
+    color: #FFFFFF;;
     padding-right: 30px;
     padding-left: 30px;
 

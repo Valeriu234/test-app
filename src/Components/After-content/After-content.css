@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .after-content {
     width: 1300px;
     height: 120px;
@@ -45,6 +46,7 @@
     font-size: 18px;
     line-height: 27px;
     color: #42403F;
+    width: 580px;
 }
 
 .section2-first-section input {
@@ -53,6 +55,11 @@
     padding: 0px 15px;
     border: 1px solid #E7E5E4;
     border-radius: 7px;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
 }
 
 .section2-first-section {

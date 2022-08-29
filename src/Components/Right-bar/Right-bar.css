@@ -6,8 +6,6 @@
     justify-content: space-evenly;
     border-left: 1px solid #E7E5E4;
     align-items: center;
-    position: relative;
-    top: 50px;
 }
 
 
@@ -20,7 +18,26 @@
     align-items: center;
 }
 
+.checked-line-rca {
+    width: 2px;
+    height: 100px;
+    background-color: #00834B;
+    border-width: 0;
+    border-radius: 3px;
+}
+
 .round {
+    width: 35px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.first-round {
     width: 35px;
     height: 35px;
     border: 2px solid #00834B;
@@ -28,7 +45,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .punct {
@@ -77,3 +93,19 @@
 
 }
 
+
+.checked-line-book {
+    width: 2px;
+    height: 250px;
+    background-color: #00834B;
+    border-width: 0;
+    border-radius: 3px;
+}
+
+.line-book {
+    width: 1px;
+    height: 250px;
+    background-color: #E7E5E4;
+    border-width: 0;
+    border-radius: 3px;
+}

@@ -3,11 +3,8 @@
     height: calc(100vh - 102px);
     display: flex;
     flex-direction: column;
-   align-items:   center;
+    align-items: center;
     justify-content: space-between;
-    position: relative;
-    top: 50px;
-
 }
 
 .left-bar img {
@@ -26,67 +23,67 @@
 }
 
 
-  .languages hr {
+.languages hr {
     height: 100%;
     width: 1px;
     background-color: #E7E5E4;
-      margin: 10px;
+    margin: 10px;
 
 }
 
-  .text-languages {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px;
-  }
+.text-languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
 
-  .call {
-      margin-top: 35px;
-      margin-bottom: 35px;
-  }
+.call {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
 
- .messenger {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     margin-bottom: 35px;
-     margin-top: 35px;
-     padding-bottom: 35px;
-     border-bottom: 1px solid  #E7E5E4;
- }
+.messenger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #E7E5E4;
+}
 
- .whatsapp {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     margin-top: 35px;
-     margin-bottom: 30px;
- }
+.whatsapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
 
- .relation-line {
-     width: 1px;
-     height: 224px;
-     background-color: #E7E5E4;
-     border-width: 0;
+.relation-line {
+    width: 1px;
+    height: 224px;
+    background-color: #E7E5E4;
+    border-width: 0;
 
- }
+}
 
- .left-bar {
-     border-right: 1px solid #E7E5E4;
+.left-bar {
+    border-right: 1px solid #E7E5E4;
 
- }
+}
 
- .lang-space {
-     border-width: 0;
- }
+.lang-space {
+    border-width: 0;
+}
 
- .text-description {
-     font-family: 'PT Root UI';
-     font-style: normal;
-     font-weight: 400;
-     font-size: 14px;
-     line-height: 21px;
-     color: #1B1918;
- }
+.text-description {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #1B1918;
+}
 

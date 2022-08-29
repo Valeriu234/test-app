@@ -16,11 +16,12 @@ import location from '../../../images/icons/burger-icons/placeholder.png'
 import search from '../../../images/icons/burger-icons/search.png'
 
 
+const BurgerMenu = ({showMenu, setShowMenu}) => {
+    const [activeLang, setActiveLang] = useState(false)
 
-const BurgerMenu = ({setShowMenu}) => {
-    const [activeLang, setActiveLang] =useState(false)
+
     return (
-        <div className='container-burger'>
+        <div className={showMenu === true ? 'container-burger-active' : 'container-burger'}>
             <div className='menu-text-btn'>
                 <svg onClick={() => {
                     setShowMenu(false)
@@ -31,7 +32,7 @@ const BurgerMenu = ({setShowMenu}) => {
             </div>
             <ul className='flex-list'>
                 <li className='list-item'><img src={home} alt='home'/>Pagina Principala</li>
-                <li className='list-item'><img src={users} alt='users' />Despre Minicode</li>
+                <li className='list-item'><img src={users} alt='users'/>Despre Minicode</li>
                 <li className='list-item'><img src={checkCircle} alt='checkCircle'/>Produse de asigurare</li>
                 <li className='list-item'><img src={delivery} alt="delivery"/> Caz asigurat</li>
                 <li className='list-item'><img src={fileReg} alt="fileReg"/>Cariera</li>
@@ -42,35 +43,35 @@ const BurgerMenu = ({setShowMenu}) => {
             </ul>
 
             <div className='footer-menu'>
-            <div className='menu-lang'>
-                <img className='lang-image' src={lang} alt="lang"/>
-                <span onClick={() => {
-                    setActiveLang(false)
-                }} className={activeLang === true? 'lang': 'selected-lang'}>Рус </span>
-                <div className='hr-line'></div>
-                <span onClick={() => {
-                    setActiveLang(true)
-                }} className={activeLang === false? 'lang': 'selected-lang'}> Ro</span>
-            </div>
-            <div className='contacts'>
-                <div className='item-contacts'>
-                <img src={phone} width='18px' height='18px' alt=""/>
-                 <span className='number-contacts'>+ 373 69 845 845</span>
+                <div className='menu-lang'>
+                    <img className='lang-image' src={lang} alt="lang"/>
+                    <span onClick={() => {
+                        setActiveLang(false)
+                    }} className={activeLang === true ? 'lang' : 'selected-lang'}>Рус </span>
+                    <div className='hr-line'></div>
+                    <span onClick={() => {
+                        setActiveLang(true)
+                    }} className={activeLang === false ? 'lang' : 'selected-lang'}> Ro</span>
                 </div>
-                <div className='item-contacts'>
-                <img src={message} width='18px' height='18px' alt=""/>
-                 <span className='number-contacts'>office@minicode.md</span>
-                </div>
-                <div className='item-contacts'>
-                <img src={location} width='18px' height='18px' alt=""/>
-                 <span className='number-contacts'>mun. Chisinau, str Bucuresti, 101</span>
-                </div>
-                <div className='item-contacts'>
-                <img src={search} width='18px' height='18px' alt=""/>
-                 <span className='number-contacts'>Harta</span>
-                </div>
+                <div className='contacts'>
+                    <div className='item-contacts'>
+                        <img src={phone} width='18px' height='18px' alt=""/>
+                        <span className='number-contacts'>+ 373 69 845 845</span>
+                    </div>
+                    <div className='item-contacts'>
+                        <img src={message} width='18px' height='18px' alt=""/>
+                        <span className='number-contacts'>office@minicode.md</span>
+                    </div>
+                    <div className='item-contacts'>
+                        <img src={location} width='18px' height='18px' alt=""/>
+                        <span className='number-contacts'>mun. Chisinau, str Bucuresti, 101</span>
+                    </div>
+                    <div className='item-contacts'>
+                        <img src={search} width='18px' height='18px' alt=""/>
+                        <span className='number-contacts'>Harta</span>
+                    </div>
 
-            </div>
+                </div>
             </div>
         </div>
     );

@@ -85,6 +85,12 @@ const MySelect = ({data, placeholder, changeForumValues, formValues, id}) => {
                         console.log(formValues)
                     } else if (id === '4') {
                         changeForumValues(true)
+                    } else if (id === '5') {
+                        changeForumValues({...formValues, firstSelect: true})
+                    } else if (id === '6') {
+                        changeForumValues({...formValues, secondSelect: true})
+                    } else if (id === '7') {
+                        changeForumValues({...formValues, thirdSelect: true})
                     }
                 }}/>
 

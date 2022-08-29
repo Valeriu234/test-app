@@ -100,6 +100,7 @@ const DescriptionCard = styled.p`
 `
 const SuperContainer = styled.div`
   padding-left: 15px;
+  height: 491px;
 `
 
 const SliderRca2 = ({changeDisabled, setSecondPageRCA}) => {

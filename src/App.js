@@ -11,8 +11,9 @@ import './assets/fonts/Fonts.css'
 import RightBarBook from "./Components/Right-bar/Right-bar-book";
 import RightBarRca from "./Components/Right-bar/Right-bar-rca";
 import RightBarWhiteContainer from "./Components/Right-bar/Right-bar-white-container";
-import {useState} from "react";
+import React, {useEffect, useState} from "react";
 import BurgerMenu from "./Components/UI/Burger-Menu/BurgerMenu";
+
 
 function App() {
 
@@ -21,11 +22,22 @@ function App() {
     const [register, setRegister] = useState(false);
     const [signIn, setSignIn] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
+    const toggleModal = () => {
+        setShowMenu(!showMenu)
+    }
+
+    useEffect(() => {
+        if (showMenu) {
+            document.body.classList.add('active-modal')
+        } else {
+            document.body.classList.remove('active-modal')
+        }
+    }, [showMenu])
 
     return (<div className='App'>
-            {showMenu === true && (
-                <BurgerMenu setShowMenu={setShowMenu}/>
-            )}
+            <div onClick={toggleModal} className={showMenu === true ? "overlay-burger" : ''}></div>
+            <BurgerMenu showMenu={showMenu} setShowMenu={setShowMenu}/>
+
             <Header setShowMenu={setShowMenu} setSignIn={setSignIn} setRegister={setRegister}/>
             <div className='content'>
                 <LeftBar/>
@@ -35,10 +47,10 @@ function App() {
                     <RightBarWhiteContainer/>
                 )}
                 {isMenu === 'Carte verde' && (
-                    <RightBarBook/>
+                    <RightBarBook countClick={countClick} setCountClick={setCountClick}/>
                 )}
                 {isMenu === 'RCA' && (
-                    <RightBarRca/>
+                    <RightBarRca countClick={countClick} setCountClick={setCountClick}/>
                 )}
                 {isMenu === 'Casco' && (
                     <RightBarCasco countClick={countClick} setCountClick={setCountClick}/>
