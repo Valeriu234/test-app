@@ -15,13 +15,15 @@ const AfterContent = () => {
                 </div>
                 <div className='section2'>
                     <div className='section2-first-section'>
-                        <input placeholder='Nume/Prenume' type="text"/>
+                        <input className='input-after' placeholder='Nume/Prenume' type="text"/>
                         <InputMask
+                            className='input-mask'
                             value={phone}
                             onChange={e => setPhone(e.target.value)}
                             mask="(+373\) 99-999-999 "
                             maskChar="_"
                             alwaysShowMask
+                            maskPlaceholder="-"
                         />
                     </div>
                     <div className="section2-second-section">

@@ -5,7 +5,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 102px;
+    background-color: white;
 }
+
+.white-left-bar {
+    width: 100px;
+    height: calc(100vh - 102px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 .left-bar img {
     width: 32px;
@@ -41,6 +54,7 @@
 .call {
     margin-top: 35px;
     margin-bottom: 35px;
+    cursor: pointer;
 }
 
 .messenger {
@@ -51,6 +65,8 @@
     margin-top: 35px;
     padding-bottom: 35px;
     border-bottom: 1px solid #E7E5E4;
+    cursor: pointer;
+
 }
 
 .whatsapp {
@@ -59,6 +75,7 @@
     align-items: center;
     margin-top: 35px;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .relation-line {
@@ -87,3 +104,27 @@
     color: #1B1918;
 }
 
+
+
+.lang-leftbar {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #1B1918;
+    cursor: pointer;
+
+}
+
+.selected-lang-leftbar {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #A40731;
+    cursor: pointer;
+}

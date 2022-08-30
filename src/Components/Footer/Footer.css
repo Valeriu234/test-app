@@ -6,7 +6,6 @@
     padding: 80px 0px;
 
     width: 100%;
-    height: 552px;
 
     background: #A40731;
     gap: 130px;
@@ -14,7 +13,6 @@
 
 .footer-content {
     width: 1300px;
-    height: 392px;
     display: flex;
     justify-content: space-between;
 }
@@ -26,12 +24,10 @@
     padding: 60px 0px 0px;
     gap: 30px;
     width: 200px;
-    height: 392px;
 }
 
 .first-section {
     width: 310px;
-    height: 345px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -72,9 +68,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px 30px;
+    padding: 9px 30px;
     gap: 10px;
-    height: 45px;
     background: #FFFFFF;
     border: 1px solid #A40731;
     border-radius: 7px;

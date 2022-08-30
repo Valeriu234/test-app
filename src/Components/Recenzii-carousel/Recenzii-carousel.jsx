@@ -24,7 +24,7 @@ export default class SimpleSlider extends Component {
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: 5000,
+            // autoplay: 5000,
             appendDots: (dots) => <ul>{dots}</ul>,
             customPaging: (i) => <div className="ft-slick__dots--custom"></div>
         };

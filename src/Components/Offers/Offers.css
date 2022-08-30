@@ -6,7 +6,6 @@
     align-items: center;
     padding: 80px 0px;
     width: 100%;
-    height: 750px;
     background: url(../../images/bg-image/Oferte.png), #F4F9FF;
     background-size: cover;
 }
@@ -20,11 +19,9 @@
 
 .offers-container {
     width: 1300px;
-    height: 590px;
 }
 
 .container-p {
-    height: 45px;
     display: flex;
     align-items: center;
 
@@ -75,9 +72,7 @@
     font-size: 24px;
     line-height: 36px;
     color: #1B1918;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
+
 }
 
 .components p {
@@ -87,17 +82,17 @@
     font-size: 18px;
     line-height: 27px;
     color: #1B1918;
-    margin-left: 20px;
     margin-top: 40px;
-    margin-right: 20px;
+
 }
 
 .component1 {
     background-color: white;
     width: 420px;
-    height: 500px;
     box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
     border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
 }
 .component1 img {
     border-radius: 7px 7px 0 0;
@@ -105,10 +100,11 @@
 .component2 {
     background-color: white;
     width: 420px;
-    height: 500px;
     margin-left: 20px;
     box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
     border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
 }
 .component2 img {
     border-radius: 7px 7px 0 0;
@@ -116,10 +112,11 @@
 .component3 {
     background-color: white;
     width: 420px;
-    height: 500px;
     margin-left: 20px;
     box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
     border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
 }
 .component3 img {
     border-radius: 7px 7px 0 0;
@@ -135,15 +132,14 @@
 }
 
 .button-more h4 {
-    margin-left: 20px;
     font-family: 'PT Root UI';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
     color: #A40731;
-    margin-top: 9px;
-    margin-bottom: 9px;
+    padding-top: 9px;
+    padding-bottom: 9px;
 }
 
 .container-p:hover {
@@ -182,13 +178,22 @@
     transform: scale(1.1);
 }
 
+
+
+
+
 .component1 img {
     transition: 0.5s all ease-in-out;
 }
 
 .component1:hover img {
     transform: scale(1.1);
+
 }
 .button-more {
     width: fit-content;
+}
+
+.info {
+    padding: 20px
 }

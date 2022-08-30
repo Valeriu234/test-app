@@ -3,17 +3,24 @@ import language from '../../images/left-bar/lang.svg'
 import phone from '../../images/left-bar/phone.svg'
 import messenger from '../../images/left-bar/messengermes.svg'
 import whatsapp from '../../images/left-bar/whatsappwhatsapp.svg'
+import {useState} from "react";
 
 
 const LeftBar = () => {
+    const [activeLanguage, setActiveLanguage] = useState(false)
+
     return (
         <div className='left-bar'>
 <div className="languages">
     <img src={language} alt=""/>
     <div className='text-languages'>
-        <p className='text-description'>Рус</p>
+        <p onClick={() => {
+            setActiveLanguage(false)
+        }} className={activeLanguage === true ? 'lang-leftbar' : 'selected-lang-leftbar'}>Рус</p>
         <hr className='lang-space'/>
-        <p className='text-description'>Eng</p>
+        <p onClick={() => {
+            setActiveLanguage(true)
+        }} className={activeLanguage === false ? 'lang-leftbar' : 'selected-lang-leftbar'}>Eng</p>
     </div>
 </div>
     <hr className='relation-line'/>

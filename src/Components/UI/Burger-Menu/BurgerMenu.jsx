@@ -22,6 +22,8 @@ const BurgerMenu = ({showMenu, setShowMenu}) => {
 
     return (
         <div className={showMenu === true ? 'container-burger-active' : 'container-burger'}>
+
+            <div className="top-items">
             <div className='menu-text-btn'>
                 <svg onClick={() => {
                     setShowMenu(false)
@@ -41,6 +43,7 @@ const BurgerMenu = ({showMenu, setShowMenu}) => {
                 <li className='list-item'><img src={question} alt="question"/>Intrebari</li>
                 <li className='list-item'><img src={phone} alt="phone"/>Contacte</li>
             </ul>
+            </div>
 
             <div className='footer-menu'>
                 <div className='menu-lang'>

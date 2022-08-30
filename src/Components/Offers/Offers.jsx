@@ -24,6 +24,7 @@ const Offers = () => {
             <div className="container-for-image">
             <img src={image1} alt=""/>
             </div>
+            <div className='info'>
             <h3>Asigurati locuinta atunci cind pleci in vacanta!</h3>
             <p>Asigurati locuinta atunci cind pleci in vacanta</p>
             <div className='button-more'>
@@ -31,12 +32,14 @@ const Offers = () => {
                 <svg className="arrow-right-offers">
                     <use href={sprite + '#arrow-right'}></use>
                 </svg>
+            </div>
             </div>
         </div>
         <div className='component2'>
             <div className='container-for-image'>
             <img src={image2} alt=""/>
             </div>
+            <div className='info'>
             <h3>Asigurati locuinta atunci cind pleci in vacanta!</h3>
             <p>Asigurati locuinta atunci cind pleci in vacanta</p>
             <div className='button-more'>
@@ -44,12 +47,14 @@ const Offers = () => {
                 <svg className="arrow-right-offers">
                     <use href={sprite + '#arrow-right'}></use>
                 </svg>
+            </div>
             </div>
         </div>
         <div className='component3'>
             <div className="container-for-image">
             <img src={image3} alt=""/>
             </div>
+            <div className='info'>
             <h3>Asigurati locuinta atunci cind pleci in vacanta!</h3>
             <p>Asigurati locuinta atunci cind pleci in vacanta</p>
             <div className='button-more'>
@@ -57,6 +62,7 @@ const Offers = () => {
                 <svg className="arrow-right-offers">
                     <use href={sprite + '#arrow-right'}></use>
                 </svg>
+            </div>
             </div>
         </div>
     </div>

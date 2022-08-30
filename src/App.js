@@ -13,6 +13,7 @@ import RightBarRca from "./Components/Right-bar/Right-bar-rca";
 import RightBarWhiteContainer from "./Components/Right-bar/Right-bar-white-container";
 import React, {useEffect, useState} from "react";
 import BurgerMenu from "./Components/UI/Burger-Menu/BurgerMenu";
+import WhiteLeftBar from "./Components/Left-bar/white-leftBar";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <Header setShowMenu={setShowMenu} setSignIn={setSignIn} setRegister={setRegister}/>
             <div className='content'>
                 <LeftBar/>
+                <WhiteLeftBar/>
                 <CenterContent signIn={signIn} setSignIn={setSignIn} register={register} setRegister={setRegister}
                                countClick={countClick} setCountClick={setCountClick} setIsMenu={setIsMenu}/>
                 {isMenu === null && (
