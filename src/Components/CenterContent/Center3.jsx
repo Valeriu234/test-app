@@ -24,12 +24,15 @@ const Center3 = () => {
                     </svg>
                 </div>
                 <div className={`description-text-container2 ${isActive2 ? 'hided' : ''}`}>
-                    <p className='text-paragraph first-paragraph'>
-                        Prin asigurarea „Carte Verde” sunt protejate interesele terțelor persoane pentru pagubele
-                        produse vieții, sănătății și bunurilor lor în urma accidentelor rutiere, care au avut loc în
-                        afara hotarelor Republicii Moldova (pe teritoriul țărilor membre ale sistemului „Carte Verde”).
-                    </p>
+                    <div className='container-paragraphs'>
+                        <p className='text-paragraph first-paragraph'>
+                            Prin asigurarea „Carte Verde” sunt protejate interesele terțelor persoane pentru pagubele
+                            produse vieții, sănătății și bunurilor lor în urma accidentelor rutiere, care au avut loc în
+                            afara hotarelor Republicii Moldova (pe teritoriul țărilor membre ale sistemului „Carte
+                            Verde”).
+                        </p>
 
+                    </div>
                 </div>
             </div>
             <div className="container-big">
@@ -41,16 +44,20 @@ const Center3 = () => {
                     </svg>
                 </div>
                 <div className={`description-text-container2 ${isActive1 ? 'hided' : ''}`}>
-                    <p className='text-paragraph first-paragraph'>
-                        Se acordă despăgubiri pentru prejudiciile provocate prin accidente de vehicule produse în
-                        limitele teritoriale de acoperire, în conformitate cu legislaţia în vigoare din statul pe
-                        teritoriul căruia s-a produs accidentul.
-                    </p><p className='text-paragraph'>
-                    Despăgubirile se acordă pentru pagube materiale, cheltuieli de judecată efectuate de către persoana
-                    prejudiciată şi vătămări corporale sau deces, inclusiv pentru prejudicii fără caracter patrimonial.
-                </p>
+                    <div className='container-paragraphs'>
+                        <p className='text-paragraph first-paragraph'>
+                            Se acordă despăgubiri pentru prejudiciile provocate prin accidente de vehicule produse în
+                            limitele teritoriale de acoperire, în conformitate cu legislaţia în vigoare din statul pe
+                            teritoriul căruia s-a produs accidentul.
+                        </p><p className='text-paragraph'>
+                        Despăgubirile se acordă pentru pagube materiale, cheltuieli de judecată efectuate de către
+                        persoana
+                        prejudiciată şi vătămări corporale sau deces, inclusiv pentru prejudicii fără caracter
+                        patrimonial.
+                    </p>
 
 
+                    </div>
                 </div>
             </div>
         </>

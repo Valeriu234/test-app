@@ -11,35 +11,34 @@ const LeftBar = () => {
 
     return (
         <div className='left-bar'>
-<div className="languages">
-    <img src={language} alt=""/>
-    <div className='text-languages'>
-        <p onClick={() => {
-            setActiveLanguage(false)
-        }} className={activeLanguage === true ? 'lang-leftbar' : 'selected-lang-leftbar'}>Рус</p>
-        <hr className='lang-space'/>
-        <p onClick={() => {
-            setActiveLanguage(true)
-        }} className={activeLanguage === false ? 'lang-leftbar' : 'selected-lang-leftbar'}>Eng</p>
-    </div>
-</div>
-    <hr className='relation-line'/>
-    <div className='call'>
-        <img src={phone} alt=""/>
-        <p className='text-description'>Suna</p>
-    </div>
-    <hr className='relation-line'/>
-   <div className='bottom-actions'>
-       <div className="messenger">
-           <img src={messenger} alt=""/>
-           <p className='text-description'>Messenger</p>
-       </div>
-       <div className="whatsapp">
-           <img src={whatsapp} alt=""/>
-           <p className='text-description'>Whatsapp</p>
-
-       </div>
-   </div>
+            <div className="languages">
+                <img src={language} alt=""/>
+                <div className='text-languages'>
+                    <p onClick={() => {
+                        setActiveLanguage(false)
+                    }} className={activeLanguage === true ? 'lang-leftbar' : 'selected-lang-leftbar'}>Рус</p>
+                    <hr className='lang-space'/>
+                    <p onClick={() => {
+                        setActiveLanguage(true)
+                    }} className={activeLanguage === false ? 'lang-leftbar' : 'selected-lang-leftbar'}>Eng</p>
+                </div>
+            </div>
+            <hr className='relation-line'/>
+            <a className='call' href='tel:123-456-7890'>
+                <img src={phone} alt=""/>
+                <p className='text-description'>Suna</p>
+            </a>
+            <hr className='relation-line'/>
+            <div className='bottom-actions'>
+                <a className='messenger' target='_blank' href="https://www.messenger.com/">
+                    <img src={messenger} alt=""/>
+                    <p className='text-description'>Messenger</p>
+                </a>
+                <a href='https://www.whatsapp.com/' target='_blank' className="whatsapp">
+                    <img src={whatsapp} alt=""/>
+                    <p className='text-description'>Whatsapp</p>
+                </a>
+            </div>
         </div>
     )
 

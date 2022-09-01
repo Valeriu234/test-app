@@ -55,6 +55,9 @@
     margin-top: 35px;
     margin-bottom: 35px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .messenger {
@@ -66,6 +69,7 @@
     padding-bottom: 35px;
     border-bottom: 1px solid #E7E5E4;
     cursor: pointer;
+    gap: 10px;
 
 }
 
@@ -76,6 +80,7 @@
     margin-top: 35px;
     margin-bottom: 30px;
     cursor: pointer;
+    gap: 10px;
 }
 
 .relation-line {
@@ -103,7 +108,6 @@
     line-height: 21px;
     color: #1B1918;
 }
-
 
 
 .lang-leftbar {

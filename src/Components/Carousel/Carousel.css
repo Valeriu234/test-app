@@ -32,7 +32,7 @@
 
 .container-button1 {
     width: 150px;
-    height: 45px;
+    padding: 8px 30px 8px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,9 @@
     border-radius: 7px;
     background: #FFFFFF;
     color: #1B1918;
+    transition: 1s all;
 }
+
 
 .container-button1:hover {
     background-color: #A40731;
@@ -79,7 +81,8 @@
 }
 
 .container-button2 {
-    height: 45px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,6 +93,11 @@
     color: #FFFFFF;;
     padding-right: 30px;
     padding-left: 30px;
+    transition: 0.5s all;
 
 }
 
+
+.button-next {
+
+}

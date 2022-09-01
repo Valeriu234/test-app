@@ -24,14 +24,17 @@ const Center4 = () => {
                     </svg>
                 </div>
                 <div className={`description-text-container2 ${isActive2 ? 'hided' : ''}`}>
-                    <p className='text-paragraph first-paragraph'>Asigurarea RCA oferă protecție pentru eventualele
-                        prejudicii cauzate de asigurat terțelor persoane prin accidente de autovehicule pe teritoriul
-                        Republicii Moldova, și anume:
+                    <div className='container-paragraphs'>
+                        <p className='text-paragraph first-paragraph'>Asigurarea RCA oferă protecție pentru eventualele
+                            prejudicii cauzate de asigurat terțelor persoane prin accidente de autovehicule pe
+                            teritoriul
+                            Republicii Moldova, și anume:
 
-                    </p>
-                    <p className='text-paragraph'>deces sau vătămări corporale;
-                        avarii sau distrugeri ale unor bunuri (inclusiv autovehicule).</p>
+                        </p>
+                        <p className='text-paragraph'>deces sau vătămări corporale;
+                            avarii sau distrugeri ale unor bunuri (inclusiv autovehicule).</p>
 
+                    </div>
                 </div>
             </div>
             <div className="container-big">
@@ -43,13 +46,15 @@ const Center4 = () => {
                     </svg>
                 </div>
                 <div className={`description-text-container2 ${isActive1 ? 'hided' : ''}`}>
+                    <div className='container-paragraphs'>
+                        <p className='text-paragraph first-paragraph'>
+                            Deces sau vătămări corporale; avarii sau distrugeri ale unor bunuri (inclusiv autovehicule),
+                            cauzate de asigurat terțelor persoane prin accidente de autovehicule pe teritoriul
+                            Republicii
+                            Moldova
+                        </p>
 
-                    <p className='text-paragraph first-paragraph'>
-                        Deces sau vătămări corporale; avarii sau distrugeri ale unor bunuri (inclusiv autovehicule),
-                        cauzate de asigurat terțelor persoane prin accidente de autovehicule pe teritoriul Republicii
-                        Moldova
-                    </p>
-
+                    </div>
                 </div>
             </div>
         </>

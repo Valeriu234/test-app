@@ -52,13 +52,14 @@
     gap: 30px;
 }
 
-.first-section p{
+.first-section p {
     font-family: 'PT Root UI';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
     color: #FFFFFF;
+    word-break: break-word;
 }
 
 
@@ -89,6 +90,7 @@
     font-size: 20px;
     line-height: 30px;
 }
+
 .footer-heading {
     color: white;
 }

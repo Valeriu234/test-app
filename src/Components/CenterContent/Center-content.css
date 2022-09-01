@@ -148,7 +148,7 @@ li.container-for-arrow:hover .arrow-right {
 }
 
 .menu-list li {
-    transition: 0.3s;
+    transition: 0.8s;
 }
 
 .valera {
@@ -166,10 +166,10 @@ li.container-for-arrow:hover .arrow-right {
 .active {
     cursor: pointer;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 800;
     font-size: 18px;
     line-height: 27px;
-    color: #42403F;
+    color: red;
     pointer-events: none;
     border: 1px solid #E7E5E4;
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -304,7 +304,6 @@ li.container-for-arrow:hover .arrow-right {
 .description-text-container2 {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 0px;
     width: 620px;
     border-top: rgb(164, 7, 49, 0.1) solid 1px;
@@ -342,15 +341,10 @@ li.container-for-arrow:hover .arrow-right {
     /* or 150% */
     letter-spacing: 0.01em;
     color: #42403F;
-    margin: 0 40px 20px 20px;
     transition: all .3s;
-    height: 100%;
     opacity: 1;
 }
 
-.first-paragraph {
-    margin-top: 20px;
-}
 
 .riscuri-si-obligatiuni {
     display: flex;
@@ -405,6 +399,7 @@ li.container-for-arrow:hover .arrow-right {
 
 .disabled {
     pointer-events: none;
+    background-color: white;
 }
 
 
@@ -439,3 +434,36 @@ li.container-for-arrow:hover .arrow-right {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+
+.container-paragraphs {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 20px 0 20px;
+    margin: 20px 0 20px 0;
+    overflow-y: auto;
+    border-radius: 7px;
+}
+
+
+.container-paragraphs::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border: 4px solid transparent;
+    border-radius: 7px;
+
+
+}
+
+.container-paragraphs::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+}
+
+.container-paragraphs::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+}
+
+

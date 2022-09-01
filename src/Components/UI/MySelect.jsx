@@ -30,7 +30,9 @@ const MySelect = ({data, placeholder, changeForumValues, formValues, id}) => {
         }),
         menu: (styles) => ({
             ...styles, borderRadius: '7px',
-            border: '1px solid gray'
+            border: '1px solid gray',
+            overflow: 'hidden'
+
         }),
         option: (styles, {data, isFocused, isDisabled, isSelected}) => {
 
@@ -38,8 +40,9 @@ const MySelect = ({data, placeholder, changeForumValues, formValues, id}) => {
                 ...styles, height: '45px',
                 backgroundColor: isFocused ? '#F9F9F9' : 'white',
                 color: isSelected || isFocused ? 'black' : '#42403F',
-                borderRadius: '7px 7px',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center'
             }
         },
         placeholder: (styles) => {

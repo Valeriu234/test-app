@@ -163,52 +163,60 @@ const Carousel = ({
             </div>
             <div className="indicators">
                 <Modal/>
-                <button
-                    onClick={() => {
-                        updateIndex(activeIndex - 1);
-                        if (id === '1') {
-                            setCountClick(countClick - 1)
-                            changeDisabled(false);
-                            if (countClick === 3 && priceState === false) {
-                                setPriceState(true)
-                                updateIndex(activeIndex)
+
+                {activeIndex > 0 && (
+                    <button
+                        onClick={() => {
+                            updateIndex(activeIndex - 1);
+                            if (id === '1') {
                                 setCountClick(countClick - 1)
+                                changeDisabled(false);
+                                if (countClick === 3 && priceState === false) {
+                                    setPriceState(true)
+                                    updateIndex(activeIndex)
+                                    setCountClick(countClick - 1)
+                                }
+                            } else if (id === '2') {
+                                if (activeIndex === 1) {
+                                    setCountClick(countClick - 1)
+                                    verifyFirstPageRCA()
+                                } else if (activeIndex === 2) {
+                                    verifySecondPageRCA()
+                                    setCountClick(countClick - 1)
+                                } else if (activeIndex === 3) {
+                                    verifyThirdPageRCA()
+                                    setCountClick(countClick - 1)
+                                }
+                                if (countClick === 4 && priceState === false) {
+                                    setPriceState(true)
+                                    setCountClick(countClick - 1)
+                                    setActiveIndex(activeIndex)
+                                }
+                            } else if (id === '3') {
+                                if (activeIndex === 1) {
+                                    setCountClick(countClick - 1)
+                                    verifyCarteVerde1()
+                                }
+                                if (countClick === 2 && priceState === false) {
+                                    setPriceState(true)
+                                    setCountClick(countClick - 1)
+                                    setActiveIndex(activeIndex)
+                                }
                             }
-                        } else if (id === '2') {
-                            if (activeIndex === 1) {
-                                setCountClick(countClick - 1)
-                                verifyFirstPageRCA()
-                            } else if (activeIndex === 2) {
-                                verifySecondPageRCA()
-                                setCountClick(countClick - 1)
-                            } else if (activeIndex === 3) {
-                                verifyThirdPageRCA()
-                                setCountClick(countClick - 1)
-                            }
-                            if (countClick === 4 && priceState === false) {
-                                setPriceState(true)
-                                setCountClick(countClick - 1)
-                                setActiveIndex(activeIndex)
-                            }
-                        } else if (id === '3') {
-                            if (activeIndex === 1) {
-                                setCountClick(countClick - 1)
-                                verifyCarteVerde1()
-                            }
-                            if (countClick === 2 && priceState === false) {
-                                setPriceState(true)
-                                setCountClick(countClick - 1)
-                                setActiveIndex(activeIndex)
-                            }
-                        }
-                    }}>
-                    <div className="container-button1">
-                        <svg className="arrow-left1">
-                            <use href={sprite + "#arrow-left"}></use>
-                        </svg>
-                        <span className='buttons'>Inapoi</span>
-                    </div>
-                </button>
+                        }}>
+                        <div className="container-button2">
+                            <svg className="arrow-left2">
+                                <use href={sprite + "#arrow-left"}></use>
+                            </svg>
+                            <span className='buttons'>Inapoi</span>
+                        </div>
+                    </button>
+                )}
+                {activeIndex === 0 && (
+                    <div></div>
+                )}
+
+
                 <button className={`${disabled ? 'disabled' : ''}`} onClick={() => {
                     updateIndex(activeIndex + 1);
                     if (id === '1') {
@@ -257,20 +265,20 @@ const Carousel = ({
                         }
                     }
                 }}>
-                    <div className='container-button2'>
+                    <div className={disabled ? 'container-button1' : 'container-button2'}>
                         <span
                             className="buttons">{id === '1' ? activeIndex === 0 || activeIndex === 1 ? 'Inainte' : activeIndex === 2 && priceState === false ? 'Finalizeaza comanda' : 'Vezi costul' : id === '2' ? activeIndex !== 3 ? 'Inainte' : activeIndex === 3 && priceState ? "Vezi costul" : 'Finalizeaza comanda' : id === '3' ? activeIndex !== 1 ? 'Inainte' : activeIndex === 1 && priceState ? 'Vezi costul' : 'Finalizeaza comanda' : ''}</span>
                         {id === '1' ? activeIndex !== 2 && (
-                            <svg className="arrow-left2">
+                            <svg className={disabled ? 'arrow-left1' : 'arrow-left2'}>
                                 <use href={sprite + "#arrow-right"}></use>
                             </svg>
                         )
                             : id === '2' ? activeIndex !== 3 && (
-                                <svg className="arrow-left2">
+                                <svg className={disabled ? 'arrow-left1' : 'arrow-left2'}>
                                     <use href={sprite + "#arrow-right"}></use>
                                 </svg>
                             ) : id === '3' ? activeIndex !== 1 && (
-                                <svg className="arrow-left2">
+                                <svg className={disabled ? 'arrow-left1' : 'arrow-left2'}>
                                     <use href={sprite + "#arrow-right"}></use>
                                 </svg>
                             ) : ''

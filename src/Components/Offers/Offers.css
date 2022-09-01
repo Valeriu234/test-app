@@ -15,6 +15,7 @@
     height: 45px;
     display: flex;
     align-items: center;
+    word-break: break-word;
 }
 
 .offers-container {
@@ -24,8 +25,10 @@
 .container-p {
     display: flex;
     align-items: center;
+    word-break: break-word;
 
 }
+
 .container-p p {
     font-family: 'PT Root UI';
     font-style: normal;
@@ -34,6 +37,7 @@
     line-height: 27px;
     margin-right: 10px;
     color: #A40731;
+    word-break: break-word;
 }
 
 .container-headers-text {
@@ -48,7 +52,7 @@
     transition: 0.2s
 }
 
- .title-offers {
+.title-offers {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 800;
@@ -94,9 +98,11 @@
     overflow: hidden;
     cursor: pointer;
 }
+
 .component1 img {
     border-radius: 7px 7px 0 0;
 }
+
 .component2 {
     background-color: white;
     width: 420px;
@@ -106,9 +112,11 @@
     overflow: hidden;
     cursor: pointer;
 }
+
 .component2 img {
     border-radius: 7px 7px 0 0;
 }
+
 .component3 {
     background-color: white;
     width: 420px;
@@ -118,9 +126,11 @@
     overflow: hidden;
     cursor: pointer;
 }
+
 .component3 img {
     border-radius: 7px 7px 0 0;
 }
+
 .button-more {
     display: flex;
     flex-direction: row;
@@ -146,7 +156,7 @@
     cursor: pointer;
 }
 
-.container-p:hover .arrow-right-offers{
+.container-p:hover .arrow-right-offers {
     width: 34px;
     height: 30px;
 }
@@ -154,13 +164,16 @@
 .button-more {
     cursor: pointer;
 }
+
 .button-more:hover .arrow-right-offers {
     width: 34px;
     height: 30px;
 }
+
 .component2 img {
     transition: 0.5s all ease-in-out;
 }
+
 .component2:hover img {
     transform: scale(1.1);
 }
@@ -171,15 +184,14 @@
     height: 247px;
     overflow: hidden;
 }
+
 .component3 img {
     transition: 0.5s all ease-in-out;
 }
+
 .component3:hover img {
     transform: scale(1.1);
 }
-
-
-
 
 
 .component1 img {
@@ -190,10 +202,12 @@
     transform: scale(1.1);
 
 }
+
 .button-more {
     width: fit-content;
 }
 
 .info {
-    padding: 20px
+    padding: 20px;
+    word-break: break-word;
 }

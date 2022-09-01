@@ -23,7 +23,6 @@ const AfterContent = () => {
                             mask="(+373\) 99-999-999 "
                             maskChar="_"
                             alwaysShowMask
-                            maskPlaceholder="-"
                         />
                     </div>
                     <div className="section2-second-section">

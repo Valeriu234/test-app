@@ -24,12 +24,16 @@ const Center2 = () => {
                     </svg>
                 </div>
                 <div className={`description-text-container2 ${isActive2 ? 'hided' : ''}`}>
-                    <p className='text-paragraph first-paragraph'>Autovehicule înmatriculate în Republica Moldova, care
-                        aparţin persoanelor fizice şi juridice.</p>
-                    <p className='text-paragraph'>Echipamentul suplimentar, care nu intră în dotarea autovehiculului
-                        conform listei de dotări ale uzinei producătoare.</p>
-                    <p className='text-paragraph'>Conducătorul auto şi pasagerii, pentru cazuri de accidente care pot
-                        avea loc în timpul accidentelor rutiere.</p>
+                    <div className='container-paragraphs'>
+                        <p className='text-paragraph first-paragraph'>Autovehicule înmatriculate în Republica Moldova,
+                            care
+                            aparţin persoanelor fizice şi juridice.</p>
+                        <p className='text-paragraph'>Echipamentul suplimentar, care nu intră în dotarea autovehiculului
+                            conform listei de dotări ale uzinei producătoare.</p>
+                        <p className='text-paragraph'>Conducătorul auto şi pasagerii, pentru cazuri de accidente care
+                            pot
+                            avea loc în timpul accidentelor rutiere.</p>
+                    </div>
                 </div>
             </div>
             <div className="container-big">
@@ -42,37 +46,44 @@ const Center2 = () => {
                 </div>
                 <div className={`description-text-container2 ${isActive1 ? 'hided' : ''}`}>
 
+                    <div className='container-paragraphs'>
+                        <p className='text-paragraph first-paragraph'>
+                            "DAUNE" - prejudiciile materiale cauzate Asiguratului prin deteriorarea sau distrugerea
+                            autovehiculului şi a echipamentului suplimentar ca urmare a:
+                        </p>
 
-                    <p className='text-paragraph first-paragraph'>
-                        "DAUNE" - prejudiciile materiale cauzate Asiguratului prin deteriorarea sau distrugerea
-                        autovehiculului şi a echipamentului suplimentar ca urmare a:
-                    </p>
-
-                    <p className='text-paragraph'>
-                        a. tamponării, lovirii sau ciocnirii cu un alt autovehicul, obiect; trecerii peste orice fel de
-                        obiecte statice sau în mişcare; căderii; căderii pe autovehicul a unor obiecte străine;
-                        derapării; răsturnării; alunecării;
-                    </p>
-                    <p className='text-paragraph'>
-                        b. incendiului, descărcării electrice, exploziei, ploii torenţiale, grindinei, inundaţiei,
-                        uraganului, cutremurului de pămînt, surpărilor, alunecărilor de teren, căderilor abundente de
-                        zăpadă, avalanşelor, inclusiv acţiunea directă sau indirectă a acestora;
-                    </p>
-                    <p className='text-paragraph'>
-                        - „FURT” – furtul, jaful, tîlhăria, răpirea autovehicului, a părţilor componente sau pieselor
-                        acestuia; orice daune cauzate ca urmare a furtului, jafului, tîlhăriei, răpirei sau tentativei
-                        de furt, jaf, tîlharie, răpire a autovehicului, a părţilor lui componente şi a pieselor,
-                        echipamentului primit în asigurare, precum şi a echipamentului suplimentar şi accesoriilor dacă
-                        acestea sunt asigurate conform contractului de asigurare.
-                    </p>
-                    <p className='text-paragraph'>
-                        -„ACCIDENT” – cauzarea leziunilor corporale sau decesul conducătorului auto/pasagerilor ca
-                        rezultat al unui accident rutier.
-                    </p>
-                    <p className='text-paragraph'>
-                        "AUTOCASCO" - pachetul complet de riscuri, compus din grupurile de risc "DAUNĂ" şi "FURT", care
-                        poate include suplimentar riscul "ACCIDENT".
-                    </p>
+                        <p className='text-paragraph'>
+                            a. tamponării, lovirii sau ciocnirii cu un alt autovehicul, obiect; trecerii peste orice fel
+                            de
+                            obiecte statice sau în mişcare; căderii; căderii pe autovehicul a unor obiecte străine;
+                            derapării; răsturnării; alunecării;
+                        </p>
+                        <p className='text-paragraph'>
+                            b. incendiului, descărcării electrice, exploziei, ploii torenţiale, grindinei, inundaţiei,
+                            uraganului, cutremurului de pămînt, surpărilor, alunecărilor de teren, căderilor abundente
+                            de
+                            zăpadă, avalanşelor, inclusiv acţiunea directă sau indirectă a acestora;
+                        </p>
+                        <p className='text-paragraph'>
+                            - „FURT” – furtul, jaful, tîlhăria, răpirea autovehicului, a părţilor componente sau
+                            pieselor
+                            acestuia; orice daune cauzate ca urmare a furtului, jafului, tîlhăriei, răpirei sau
+                            tentativei
+                            de furt, jaf, tîlharie, răpire a autovehicului, a părţilor lui componente şi a pieselor,
+                            echipamentului primit în asigurare, precum şi a echipamentului suplimentar şi accesoriilor
+                            dacă
+                            acestea sunt asigurate conform contractului de asigurare.
+                        </p>
+                        <p className='text-paragraph'>
+                            -„ACCIDENT” – cauzarea leziunilor corporale sau decesul conducătorului auto/pasagerilor ca
+                            rezultat al unui accident rutier.
+                        </p>
+                        <p className='text-paragraph'>
+                            "AUTOCASCO" - pachetul complet de riscuri, compus din grupurile de risc "DAUNĂ" şi "FURT",
+                            care
+                            poate include suplimentar riscul "ACCIDENT".
+                        </p>
+                    </div>
                 </div>
             </div>
         </>
