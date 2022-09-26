@@ -111,13 +111,16 @@ function SliderRca1({
                         </label>
                         <p className='text-checkbox'>Fizica</p>
                     </div>
-                    <div className='button-check'>
-                        <label className="container">
-                            <input type="checkbox" onChange={handleChange3} width='16px' height='16px'/>
-                            <span className="checkmark"></span>
-                        </label>
-                        <p className='text-checkbox'>Juridica</p>
+                        <div className='button-check'>
+                            <div className='button-check'>
+                            <label className="container">
+                                <input type="checkbox" onChange={handleChange3} width='16px' height='16px'/>
+                                <span className="checkmark"></span>
+                            </label>
+                            <p className='text-checkbox'>Juridica</p>
+                        </div>
                     </div>
+
                 </div>
 
 

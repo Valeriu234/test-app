@@ -49,12 +49,12 @@
 
 /* Create a custom checkbox */
 .checkmark {
-    display: block;
     height: 16px;
     width: 16px;
     background-color: white;
     border-radius: 4px;
     border: 1px solid #A40731;
+    display: block;
 }
 
 /* On mouse-over, add a grey background color */
